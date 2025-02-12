@@ -6,9 +6,9 @@
         min-height: 80vh;
     }
     @media(min-width:1500px){
-        max-height: 73vh;
         min-height: auto;
         overflow: hidden;
+        max-height: 82vh;
     }
     svg{
         position: absolute;
@@ -34,7 +34,8 @@
                     left: 0;
                     top: 0;
                     @media(min-width:1500px){
-                        height: 100%;
+                        height: auto;
+                        object-fit: contain;
                     }
                 }
                 .background-movil{

@@ -4,9 +4,9 @@
     position: relative;
     height: auto;
     min-height: 100vh;
-    @media(min-width:1500px){
+    /*@media(min-width:1500px){
         min-height: auto;
-    }
+    } */
     .svg{
         position: absolute;
         bottom: 2%;
@@ -24,8 +24,8 @@
         left: 0;
         top: 0;
         @media(min-width:1500px){
-            height: 38vw;
-            object-position: bottom;
+            height: auto;
+            object-fit: contain;
         }
     }
     .background-movil{

@@ -2171,6 +2171,7 @@ section#footer-blue {
 
 .extraordinary-fees-partial-45fbf9 {
   padding-bottom: 58px;
+  position: relative;
 }
 @media (max-width: 500px) {
   .extraordinary-fees-partial-45fbf9 {
@@ -2331,16 +2332,19 @@ section#footer-blue {
   height: auto;
   min-height: 100vh;
 }
-@media (min-width: 1500px) {
-  .gnp-banner-partial-3bdd98 {
-    min-height: 78vh;
-  }
-}
 .gnp-banner-partial-3bdd98 .svg-full-width {
   position: absolute;
   bottom: 2%;
   left: 0;
   transform: translateY(12%);
+}
+@media (min-width: 1500px) {
+  .gnp-banner-partial-3bdd98 {
+    padding: 10rem 0 4rem 0;
+  }
+  .gnp-banner-partial-3bdd98 .svg-full-width {
+    transform: translateY(25%);
+  }
 }
 .gnp-banner-partial-3bdd98 .background-desktop {
   width: 100%;
@@ -2354,8 +2358,8 @@ section#footer-blue {
 }
 @media (min-width: 1500px) {
   .gnp-banner-partial-3bdd98 .background-desktop {
-    height: 100%;
-    object-position: center;
+    height: auto;
+    object-fit: contain;
   }
 }
 .gnp-banner-partial-3bdd98 .background-movil {
@@ -3056,10 +3060,18 @@ section#footer-blue {
   opacity: 0;
   transition: 0.2s;
 }
+.blog-partial-b939b9 .blog-slide .owl-stage {
+  display: flex;
+}
+.blog-partial-b939b9 .blog-slide .owl-stage .owl-item {
+  display: block;
+}
 .blog-partial-b939b9 .blog-slide .item {
   padding: 5px;
+  height: 100%;
 }
 .blog-partial-b939b9 .blog-slide .item .card-post {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3089,7 +3101,7 @@ section#footer-blue {
   display: flex;
   padding: 12px 24px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
   align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
@@ -3117,6 +3129,18 @@ section#footer-blue {
   align-items: center;
   gap: 9.418px;
   text-decoration: none;
+  transition: 0.2s;
+  position: relative;
+}
+.blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #7d65fe;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
 }
 .blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card span {
   color: #000000;
@@ -3133,6 +3157,18 @@ section#footer-blue {
   height: 20.72px;
   justify-content: center;
   align-items: center;
+}
+.blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card:hover {
+  gap: 15px;
+}
+.blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card:hover::after {
+  width: 100%;
+}
+.blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card:hover span {
+  color: #7D65FE;
+}
+.blog-partial-b939b9 .blog-slide .item .card-post .body-card .cta-card:hover svg path {
+  stroke: #7D65FE;
 }
 .blog-partial-b939b9 .blog-slide .owl-dots {
   display: flex;
@@ -3847,6 +3883,7 @@ section#footer-blue {
   box-shadow: 0px 4px 15px 0px rgba(160, 160, 160, 0.25);
   overflow: hidden;
   position: relative;
+  transition: 0.2s;
 }
 @media (max-width: 500px) {
   .comprehensive-protection-partial-ef20c2 .items a .card-post {
@@ -3859,12 +3896,14 @@ section#footer-blue {
   width: 40%;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain .feature-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: 1.5s;
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain .icon {
   display: flex;
@@ -3881,10 +3920,12 @@ section#footer-blue {
   border-radius: 84.091px;
   background: #FFF;
   box-shadow: 0px 4.462px 4.462px 0px rgba(114, 114, 114, 0.25);
+  transition: 0.9s;
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain .icon img {
   width: 20.182px;
   height: 20.182px;
+  transition: 0.9s;
 }
 @media (max-width: 500px) {
   .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain {
@@ -3894,10 +3935,12 @@ section#footer-blue {
   .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain .icon {
     width: 20px;
     height: 20px;
+    transition: 0.2s;
   }
   .comprehensive-protection-partial-ef20c2 .items a .card-post .image-contain .icon img {
     width: 10px;
     height: 10px;
+    transition: 0.2s;
   }
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain {
@@ -3912,6 +3955,7 @@ section#footer-blue {
   line-height: 150%;
   letter-spacing: 0.1px;
   margin-bottom: 0;
+  transition: 0.9s;
 }
 @media (max-width: 500px) {
   .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain .name {
@@ -3926,10 +3970,12 @@ section#footer-blue {
   line-height: 150%;
   letter-spacing: 0.1px;
   margin-bottom: 0;
+  transition: 0.9s;
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain .description strong {
   color: #0A2540;
   font-weight: 600;
+  transition: 0.9s;
 }
 @media (max-width: 500px) {
   .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain .description {
@@ -3950,6 +3996,18 @@ section#footer-blue {
   gap: 7.09px;
   text-decoration: none;
   width: fit-content;
+  position: relative;
+  transition: 0.9s;
+}
+.comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain .cta::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #7d65fe;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
 }
 .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain .cta span {
   color: #000;
@@ -3975,6 +4033,35 @@ section#footer-blue {
   .comprehensive-protection-partial-ef20c2 .items a .card-post .text-contain {
     width: 55%;
   }
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post {
+  transform: scale(1.02);
+  background: rgb(250, 250, 250);
+  border: 1px solid #7d65fe;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .image-contain .feature-image {
+  transform: scale(1.4);
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .image-contain .icon {
+  background: #7d65fe;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .image-contain .icon img {
+  filter: brightness(3.5);
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .text-contain .name, .comprehensive-protection-partial-ef20c2 .items a:hover .card-post .text-contain .description, .comprehensive-protection-partial-ef20c2 .items a:hover .card-post .text-contain strong {
+  color: #7d65fe;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .cta {
+  gap: 15px;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .cta::after {
+  width: 100%;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .cta span {
+  color: #7d65fe;
+}
+.comprehensive-protection-partial-ef20c2 .items a:hover .card-post .cta svg path {
+  stroke: #7d65fe;
 }
 .comprehensive-protection-partial-ef20c2 .cta-start-free {
   display: flex;
@@ -4940,6 +5027,11 @@ section#footer-blue {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.07px;
+  transition: 0.2s;
+}
+.true-story-partial-5878a2 .slide-stories .item .card-story .body a:hover {
+  background: #000000;
+  color: white;
 }
 .true-story-partial-5878a2 .slide-stories .owl-nav {
   display: flex;
@@ -5178,12 +5270,10 @@ section#footer-blue {
   position: relative;
   height: auto;
   min-height: 100vh;
+  /*@media(min-width:1500px){
+      min-height: auto;
+  } */
   /*================ Nav ================*/
-}
-@media (min-width: 1500px) {
-  .generic-banner-partial-ec8c2e {
-    min-height: auto;
-  }
 }
 .generic-banner-partial-ec8c2e .svg {
   position: absolute;
@@ -5204,8 +5294,8 @@ section#footer-blue {
 }
 @media (min-width: 1500px) {
   .generic-banner-partial-ec8c2e .background-desktop {
-    height: 38vw;
-    object-position: bottom;
+    height: auto;
+    object-fit: contain;
   }
 }
 .generic-banner-partial-ec8c2e .background-movil {
@@ -5757,9 +5847,9 @@ section#footer-blue {
 }
 @media (min-width: 1500px) {
   .banner-partial-4607af {
-    max-height: 73vh;
     min-height: auto;
     overflow: hidden;
+    max-height: 82vh;
   }
 }
 .banner-partial-4607af svg {
@@ -5789,7 +5879,8 @@ section#footer-blue {
 }
 @media (min-width: 1500px) {
   .banner-partial-4607af .banner-slide .owl-item .item .background-desktop {
-    height: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 .banner-partial-4607af .banner-slide .owl-item .item .background-movil {
