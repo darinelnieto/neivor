@@ -3,20 +3,31 @@
     position: relative;
     height: auto;
     min-height: 100vh;
-    @media(min-width:1500px){
-        min-height: 78vh;
-    }
     .svg-full-width{
         position: absolute;
-        bottom: -15%;
+        bottom: 2%;
+        left: 0;
+        transform: translateY(12%);
+    }
+    @media(min-width:1500px){
+        padding: 10rem 0 4rem 0;
+        .svg-full-width{
+            transform: translateY(25%);
+        }
     }
     .background-desktop{
         width: 100%;
-        height: 55vw;
+        height: 53vw;
+        object-fit: cover;
+        object-position: center;
         transition: 1s;
         position: absolute;
         left: 0;
         top: 0;
+        @media(min-width:1500px){
+            height:auto;
+            object-fit: contain;
+        }
     }
     .background-movil{
         width: 100%;

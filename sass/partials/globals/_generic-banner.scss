@@ -4,9 +4,9 @@
     position: relative;
     height: auto;
     min-height: 100vh;
-    @media(min-width:1500px){
+    /*@media(min-width:1500px){
         min-height: auto;
-    }
+    } */
     .svg{
         position: absolute;
         bottom: 2%;
@@ -17,12 +17,15 @@
     .background-desktop{
         width: 100%;
         height: 53vw;
+        object-fit: cover;
+        object-position: center;
         transition: 1s;
         position: absolute;
         left: 0;
         top: 0;
         @media(min-width:1500px){
-            object-position: bottom;
+            height: auto;
+            object-fit: contain;
         }
     }
     .background-movil{
@@ -37,7 +40,8 @@
         top: 0;
     }
     .banner{
-        min-height: 24rem;
+        padding: 0 24px;
+        min-height: 59vh;
         .row{
             position: relative;
             z-index: 1;
