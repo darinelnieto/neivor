@@ -150,12 +150,8 @@
                         height: 91px;
                         align-items: flex-start;
                         gap: 9px;
-                        position: relative;
-                        z-index: 3;
                         a{
                             text-decoration: none;
-                            display: block;
-                            height: 100%;
                         }
                         .project{
                             display: flex;
@@ -168,8 +164,6 @@
                             background: #FFF;
                             box-shadow: 0px 2.147px 8.052px 0px rgba(160, 160, 160, 0.25);
                             overflow: hidden;
-                            height: 100%;
-                            transition: .2s;
                             .image-contain{
                                 height: 45px;
                                 width: 102%;
@@ -199,9 +193,6 @@
                                     line-height: 150%;
                                     letter-spacing: 0.054px;
                                 }
-                            }
-                            &:hover{
-                                transform: scale(1.04);
                             }
                         }
                     }

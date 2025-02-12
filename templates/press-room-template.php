@@ -19,5 +19,4 @@ get_header();
     <?php get_template_part('partials/about/recognitions'); ?>
 </main>
 <?php get_footer(); ?>
-
                     
