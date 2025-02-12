@@ -121,7 +121,7 @@ if(get_field('enable_regional_perspectives')):
                                             <div class="projects-list">
                                                 <?php foreach($item['projects'] as $project): ?>
                                                     <?php if($project['enable_link_to_project']): ?>
-                                                            <a href="<?= $project['link_to_project']; ?>">
+                                                            <a href="<?= $project['link_to_project']; ?>" target="_blank">
                                                         <?php endif; ?>
                                                                 <div class="project">
                                                                     <div class="image-contain">

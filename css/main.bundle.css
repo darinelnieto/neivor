@@ -3047,6 +3047,7 @@ section#footer-blue {
   height: 100%;
 }
 .blog-partial-b939b9 .blog-slide .item .card-post {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3667,6 +3668,8 @@ section#footer-blue {
   align-items: flex-start;
   gap: 9px;
   position: relative;
+  position: relative;
+  z-index: 3;
 }
 .regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .item .texts-contain .projects-list a {
   text-decoration: none;
@@ -5252,12 +5255,10 @@ section#footer-blue {
   position: relative;
   height: auto;
   min-height: 100vh;
+  /*@media(min-width:1500px){
+      min-height: auto;
+  } */
   /*================ Nav ================*/
-}
-@media (min-width: 1500px) {
-  .generic-banner-partial-ec8c2e {
-    min-height: auto;
-  }
 }
 .generic-banner-partial-ec8c2e .svg {
   position: absolute;
@@ -6137,6 +6138,9 @@ section#footer-blue {
   overflow: hidden;
 }
 #financial-services-template-c8ceb6 .generic-banner-partial-ec8c2e .background-desktop {
+  height: auto !important;
+  object-position: bottom;
   left: -14px;
   width: 102%;
+  object-fit: fill;
 }
