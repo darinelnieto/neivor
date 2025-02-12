@@ -3691,9 +3691,13 @@ section#footer-blue {
   height: 91px;
   align-items: flex-start;
   gap: 9px;
+  position: relative;
+  z-index: 3;
 }
 .regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .item .texts-contain .projects-list a {
   text-decoration: none;
+  display: block;
+  height: 100%;
 }
 .regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .item .texts-contain .projects-list .project {
   display: flex;
@@ -3706,6 +3710,8 @@ section#footer-blue {
   background: #FFF;
   box-shadow: 0px 2.147px 8.052px 0px rgba(160, 160, 160, 0.25);
   overflow: hidden;
+  height: 100%;
+  transition: 0.2s;
 }
 .regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .item .texts-contain .projects-list .project .image-contain {
   height: 45px;
@@ -3736,6 +3742,9 @@ section#footer-blue {
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.054px;
+}
+.regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .item .texts-contain .projects-list .project:hover {
+  transform: scale(1.04);
 }
 .regional-perspectives-partial-a741ab .regional-cards-contain .regional-slide .owl-nav {
   display: flex;
@@ -5849,7 +5858,6 @@ section#footer-blue {
   .banner-partial-4607af {
     min-height: auto;
     overflow: hidden;
-    max-height: 82vh;
   }
 }
 .banner-partial-4607af svg {
@@ -5876,12 +5884,10 @@ section#footer-blue {
   position: absolute;
   left: 0;
   top: 0;
-}
-@media (min-width: 1500px) {
-  .banner-partial-4607af .banner-slide .owl-item .item .background-desktop {
-    height: auto;
-    object-fit: contain;
-  }
+  /* @media(min-width:1500px){
+      height: auto;
+      object-fit: contain;
+  } */
 }
 .banner-partial-4607af .banner-slide .owl-item .item .background-movil {
   width: 100%;
@@ -5943,8 +5949,25 @@ section#footer-blue {
     display: block;
   }
 }
-.banner-partial-4607af .banner-slide .owl-item.active .background-desktop, .banner-partial-4607af .banner-slide .owl-item.active .background-movil {
-  opacity: 1;
+.banner-partial-4607af .banner-slide .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+.banner-partial-4607af .banner-slide .owl-dots .owl-dot {
+  outline: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #637281;
+}
+.banner-partial-4607af .banner-slide .owl-dots .owl-dot.active {
+  background: #7d65fe;
 }
 
 .nav-menu-partial-00596a {

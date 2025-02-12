@@ -8,7 +8,6 @@
     @media(min-width:1500px){
         min-height: auto;
         overflow: hidden;
-        max-height: 82vh;
     }
     svg{
         position: absolute;
@@ -33,10 +32,10 @@
                     position: absolute;
                     left: 0;
                     top: 0;
-                    @media(min-width:1500px){
+                    /* @media(min-width:1500px){
                         height: auto;
                         object-fit: contain;
-                    }
+                    } */
                 }
                 .background-movil{
                     width: 100%;
@@ -96,9 +95,24 @@
                 }
             }
         }
-        .owl-item.active{
-            .background-desktop, .background-movil{
-                opacity: 1;
+        .owl-dots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+            .owl-dot{
+                outline: none;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: #637281;
+            }
+            .owl-dot.active{
+                background: #7d65fe;
             }
         }
     }
