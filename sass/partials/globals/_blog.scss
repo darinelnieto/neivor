@@ -56,8 +56,15 @@
     .blog-slide{
         opacity: 0;
         transition: .2s;
+        .owl-stage{
+            display: flex;
+            .owl-item{
+                display: block;
+            }
+        }
         .item{
             padding: 5px;
+            height: 100%;
             .card-post{
                 display: flex;
                 flex-direction: column;
@@ -70,6 +77,7 @@
                 box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04), 0px 4px 8px 0px rgba(0, 0, 0, 0.06);
                 overflow: hidden;
                 text-decoration: none;
+                height: 100%;
                 .image-contain{
                     overflow: hidden;
                     height: 193.93px;
@@ -87,7 +95,7 @@
                     display: flex;
                     padding: 12px 24px;
                     flex-direction: column;
-                    justify-content: space-between;
+                    justify-content: end;
                     align-items: flex-start;
                     flex: 1 0 0;
                     align-self: stretch;
@@ -114,6 +122,17 @@
                         align-items: center;
                         gap: 9.418px;
                         text-decoration: none;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background: #7d65fe;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transition: .2s;
+                        }
                         span{
                             color: #000000;
                             text-align: center;
@@ -129,6 +148,20 @@
                             height: 20.72px;
                             justify-content: center;
                             align-items: center;
+                        }
+                        &:hover{
+                            gap: 15px;
+                            &::after{
+                                width: 100%;
+                            }
+                            span{
+                                color: #7d65fe;
+                            }
+                            svg{
+                                path{
+                                    stroke: #7d65fe;
+                                }
+                            }
                         }
                     }
                 }

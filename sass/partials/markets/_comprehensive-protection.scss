@@ -91,6 +91,7 @@
                 box-shadow: 0px 4px 15px 0px rgba(160, 160, 160, 0.25);
                 overflow: hidden;
                 position: relative;
+                transition: .2s;
                 @media(max-width:500px){
                     height: 68px;
                     gap: 5px;
@@ -100,11 +101,13 @@
                     width: 40%;
                     height: 100%;
                     position: relative;
+                    overflow: hidden;
                     .feature-image{
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         object-position: center;
+                        transition: 1.5s;
                     }
                     .icon{
                         display: flex;
@@ -121,9 +124,11 @@
                         border-radius: 84.091px;
                         background: #FFF;
                         box-shadow: 0px 4.462px 4.462px 0px rgba(114, 114, 114, 0.25);
+                        transition: .9s;
                         img{
                             width: 20.182px;
                             height: 20.182px;
+                            transition: .9s;
                         }
                     }
                     @media(max-width:500px){
@@ -132,9 +137,11 @@
                         .icon{
                             width: 20px;
                             height: 20px;
+                            transition: .2s;
                             img{
                                 width: 10px;
                                 height: 10px;
+                                transition: .2s;
                             }
                         }
                     }
@@ -150,6 +157,7 @@
                         line-height: 150%;
                         letter-spacing: 0.1px;
                         margin-bottom: 0;
+                        transition: .9s;
                         @media(max-width:500px){
                             font-size: 8px;
                         }
@@ -162,9 +170,11 @@
                         line-height: 150%;
                         letter-spacing: 0.1px;
                         margin-bottom: 0;
+                        transition: .9s;
                         strong{
                             color: #0A2540;
                             font-weight: 600;
+                            transition: .9s;
                         }
                         @media(max-width:500px){
                             font-size: 10px;
@@ -184,6 +194,18 @@
                         gap: 7.09px;
                         text-decoration: none;
                         width: fit-content;
+                        position: relative;
+                        transition: .9s;
+                        &::after{
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background: #7d65fe;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            transition: .2s;
+                        }
                         span{
                             color: #000;
                             font-size: 16px;
@@ -209,9 +231,41 @@
                 }
             }
             &:hover{
-                transform: scale(1.1);
-                transition: transform 0.3s ease-in-out;
-                border: 1px solid #7D65FE
+                .card-post{
+                    transform: scale(1.02);
+                    background: rgba(250, 250, 250, 1);
+                    border: 1px solid #7d65fe;
+                    .image-contain{
+                        .feature-image{
+                            transform: scale(1.4);
+                        }
+                        .icon{
+                            background: #7d65fe;
+                            img{
+                                filter: brightness(3.5);
+                            }
+                        }
+                    }
+                    .text-contain{
+                        .name, .description, strong{
+                            color: #7d65fe;
+                        }
+                    }
+                    .cta{
+                        gap: 15px;
+                        &::after{
+                            width: 100%;
+                        }
+                        span{
+                            color: #7d65fe;
+                        }
+                        svg{
+                            path{
+                                stroke: #7d65fe;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
