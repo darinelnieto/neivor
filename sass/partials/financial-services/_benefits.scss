@@ -6,6 +6,10 @@
         right: 0;
         transform: translateY(-15%);
     }
+    .row{
+        position: relative;
+        z-index: 2;
+    }
     h2{
         color: #0A2540;
         font-size: 40px;

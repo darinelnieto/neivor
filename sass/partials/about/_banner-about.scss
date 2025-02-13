@@ -1,9 +1,7 @@
 .banner-about-partial-7b9ae8 {
     padding: 8rem 0 4rem 0;
-    overflow: hidden;
     position: relative;
     height: auto;
-    min-height: 100vh;
     .svg{
         position: absolute;
         bottom: 2%;
@@ -13,14 +11,14 @@
     }
     .background-desktop{
         width: 100%;
-        height: 53vw;
+        height: auto;
         transition: 1s;
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 1;
         @media(min-width:1500px){
-            height: auto;
-            object-position: bottom;
+            height: 53vw;
         }
     }
     .background-movil{

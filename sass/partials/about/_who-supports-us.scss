@@ -15,6 +15,8 @@
     }
     .row{
         margin-bottom: 50px;
+        position: relative;
+        z-index: 2;
         h2{
             color: #0A2540;
             font-size: 40px;

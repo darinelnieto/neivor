@@ -1,9 +1,7 @@
 .generic-banner-partial-ec8c2e {
-    padding: 8rem 0 4rem 0;
-    overflow: hidden;
+    padding:11rem 0 1rem 0;
     position: relative;
     height: auto;
-    min-height: 100vh;
     .svg{
         position: absolute;
         bottom: 2%;
@@ -18,10 +16,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        @media(min-width:1500px){
-            height: auto;
-            object-position: bottom;
-        }
+        z-index: 1;
     }
     .background-movil{
         width: 100%;
@@ -35,7 +30,8 @@
         top: 0;
     }
     .banner{
-        min-height: 24rem;
+        padding: 0 24px;
+        min-height: 59vh;
         .row{
             position: relative;
             z-index: 1;
