@@ -162,10 +162,10 @@
                         },
                         {
                             "key": "field_67040832f7f5c",
-                            "label": "Name",
-                            "name": "name",
+                            "label": "Link",
+                            "name": "link",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "link",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -174,11 +174,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
+                            "return_format": "array",
                             "parent_repeater": "field_67040816f7f5a"
                         },
                         {
@@ -267,5 +263,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728321123
+    "modified": 1739441879
 }

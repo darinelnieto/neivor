@@ -39,9 +39,9 @@ if($recent['items']):
                                         </svg>
                                         <span>
                                             <?php if(get_bloginfo("language") == "en-US"): ?>
-                                                Ir al sitio
-                                            <?php else: ?>
                                                 Go to site
+                                            <?php else: ?>
+                                                Ir al sitio
                                             <?php endif; ?>
                                         </span>
                                     </a>

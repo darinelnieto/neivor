@@ -34,7 +34,7 @@ if(get_field('enable_voices_by_size')):
                                                 <img src="<?= $tab['icon']['url']; ?>" alt="<?= $tab['icon']['title']; ?>">
                                             </div>
                                             <div class="texts">
-                                                <span class="name"><?= $tab['name']; ?></span>
+                                                <span class="name"><?= $tab['address']; ?></span>
                                                 <span class="units"><?= $tab['units']; ?></span>
                                             </div>
                                         </a>
@@ -50,7 +50,9 @@ if(get_field('enable_voices_by_size')):
                                         <div class="description-contain">
                                             <p class="description"><?= $item['descriptions']; ?></p>
                                             <div class="end-content">
-                                                <span><?= $item['address']; ?></span>
+                                                <span class="name">
+                                                    <a href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>    
+                                                </span>
                                                 <span><?= $item['units']; ?></span>
                                             </div>
                                         </div>
@@ -71,7 +73,7 @@ if(get_field('enable_voices_by_size')):
                                             <img src="<?= $item['icon']['url']; ?>" alt="<?= $item['icon']['title']; ?>">
                                         </div>
                                         <div class="texts">
-                                            <span class="name"><?= $item['name']; ?></span>
+                                            <span class="name"><?= $item['address']; ?></span>
                                             <span class="units"><?= $item['units']; ?></span>
                                         </div>
                                     </div>
@@ -79,7 +81,9 @@ if(get_field('enable_voices_by_size')):
                                         <div class="description-contain">
                                             <p class="description"><?= $item['descriptions']; ?></p>
                                             <div class="end-content">
-                                                <span><?= $item['address']; ?></span>
+                                                <span class="name">
+                                                    <a href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>    
+                                                </span>
                                                 <span><?= $item['units']; ?></span>
                                             </div>
                                         </div>

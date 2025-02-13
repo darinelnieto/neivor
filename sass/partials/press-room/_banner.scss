@@ -1,5 +1,15 @@
 .banner-partial-39c12f {
     position: relative;
+    #svg-fixed{
+        position: absolute;
+        left: 50%;
+        top: 98%;
+        transform: translate(-50%, -98%);
+        z-index: 3;
+        @media(max-width:510px){
+            display: none;
+        }
+    }
     .banner-slide{
         opacity: 0;
         transition: .2s;
@@ -15,6 +25,7 @@
             }
             .movil{
                 display: none;
+                width: 101%;
             }
             .container{
                 position: relative;
@@ -58,11 +69,12 @@
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    transform: none;
+                    transform: translateY(-15%);
                     padding: 0 24px;
                     .text-contain{
                         h2{
                             font-size: 32px;
+                            max-width: 280px;
                         }
                         p{
                             font-size: 16px;
@@ -77,6 +89,45 @@
                 }
                 .desktop{
                     display: none !important;
+                }
+            }
+        }
+        .owl-dots{
+            display: flex !important;
+            align-items: center;
+            position: absolute;
+            top: 76%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -76%);
+            max-width: 1134px;
+            z-index: 3;
+            gap: 14.244px;
+            padding: 0 15px;
+            max-width: 1159px;
+            .owl-dot{
+                width: 9.605px;
+                height: 9.605px;
+                border-radius: 50%;
+                background: #ffffff;
+            }
+            .active{
+                width: 15.688px;
+                height: 15.688px;
+                background: linear-gradient(90deg, #FF595A -4.9%, #3EC7B5 -4.89%, #02C9FD 100.06%);
+            }
+            @media(max-width:510px){
+                max-width: fit-content;
+                top: 95%;
+                transform: translate(-50%, -95%);
+                gap: 9.554px;
+                .owl-dot{
+                    width: 6.442px;
+                    height: 6.442px;
+                }
+                .active{
+                    width: 10.522px;
+                    height: 10.522px;
                 }
             }
         }

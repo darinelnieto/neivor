@@ -146,6 +146,17 @@
                             line-height: 150%;
                             letter-spacing: 0.1px;
                         }
+                        .name{
+                            a{
+                                color: #0A2540;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 150%;
+                                letter-spacing: 0.1px;
+                                text-decoration: none;
+                            }
+                        }
                     }
                     @media(max-width:991px){
                         .description{
@@ -222,6 +233,7 @@
                                 font-weight: 600;
                                 line-height: 150%;
                                 letter-spacing: 0.055px;
+                                text-decoration: none;
                             }
                             .units{
                                 color: #0A2540;
@@ -267,6 +279,17 @@
                                     font-weight: 600;
                                     line-height: 150%;
                                     letter-spacing: 0.1px;
+                                }
+                                .name{
+                                    a{
+                                        color: #0A2540;
+                                        font-size: 20px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 150%;
+                                        letter-spacing: 0.1px;
+                                        text-decoration: none;
+                                    }
                                 }
                             }
                             @media(max-width:991px){
