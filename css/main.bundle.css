@@ -5716,12 +5716,15 @@ section#footer-blue {
 
 .boost-your-business-partial-ca6162 {
   display: flex;
-  padding: 5rem 24px;
+  padding: 5rem 0;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
   align-self: stretch;
+}
+.boost-your-business-partial-ca6162 .title-and-intro {
+  padding: 0 24px;
 }
 .boost-your-business-partial-ca6162 .title-and-intro h2 {
   color: #0A2540;
@@ -5770,6 +5773,11 @@ section#footer-blue {
   object-fit: cover;
   border-radius: 11.045px;
 }
+@media (max-width: 768px) {
+  .boost-your-business-partial-ca6162 .boost-slide .owl-item .card-item .feature-image {
+    min-height: 398px;
+  }
+}
 .boost-your-business-partial-ca6162 .boost-slide .owl-item .card-item .content {
   position: absolute;
   border-radius: 11.045px;
@@ -5789,6 +5797,28 @@ section#footer-blue {
   line-height: 150%;
   align-self: stretch;
   margin-bottom: 0;
+}
+.boost-your-business-partial-ca6162 .boost-slide .owl-dots {
+  display: flex;
+  justify-self: center;
+  gap: 8px;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boost-your-business-partial-ca6162 .boost-slide .owl-dots .owl-dot {
+  width: 5.395px;
+  height: 5.395px;
+  border-radius: 50%;
+  background: #B6B6B6;
+}
+.boost-your-business-partial-ca6162 .boost-slide .owl-dots .owl-dot.active {
+  width: 8.811px;
+  height: 8.811px;
+  background: #7D65FE;
+}
+.boost-your-business-partial-ca6162 .the-slide-movil {
+  padding: 0;
+  width: 100%;
 }
 
 .ideal-products-partial-c221ef {
@@ -6099,6 +6129,12 @@ section#footer-blue {
   top: 100%;
   display: none;
   transition: 0.2s;
+  z-index: 99;
+}
+@media (max-width: 760px) {
+  .nav-menu-partial-00596a li .sub-menu-pop-up {
+    min-width: 100% !important;
+  }
 }
 .nav-menu-partial-00596a li .sub-menu-pop-up .row {
   width: fit-content;

@@ -1,12 +1,13 @@
 .boost-your-business-partial-ca6162 {
     display: flex;
-    padding: 5rem 24px;
+    padding: 5rem 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 12px;
     align-self: stretch;
     .title-and-intro{
+        padding: 0 24px;
         h2{
             color: #0A2540;
             font-size: 40px;
@@ -49,6 +50,9 @@
                     height: 100%;
                     object-fit: cover;
                     border-radius: 11.045px;
+                    @media(max-width:768px){
+                        min-height: 398px;
+                    }
                 }
                 .content{
                     position: absolute;
@@ -72,5 +76,27 @@
                 }
             }
         }
+        .owl-dots{
+            display: flex;
+            justify-self: center;
+            gap: 8px;
+            align-items: center;
+            margin-top: 1rem;
+            .owl-dot{
+                width: 5.395px;
+                height: 5.395px;
+                border-radius: 50%;
+                background: #B6B6B6;
+            }
+            .owl-dot.active{
+                width: 8.811px;
+                height: 8.811px;
+                background: #7D65FE;
+            }
+        }
+    }
+    .the-slide-movil{
+        padding: 0;
+        width: 100%;
     }
 }

@@ -20,7 +20,7 @@ if($boost):
                     <p><?= $boost['intro']; ?></p>
                 </div>
                 <?php if($boost['cards']): ?>
-                    <div class="boost-slide owl-carousel">
+                    <div class="boost-slide owl-carousel d-none d-md-block">
                         <?php foreach($boost['cards'] as $item): ?>
                             <div class="card-item">
                                 <img src="<?= $item['feature_image']['url']; ?>" alt="<?= $item['feature_image']['title']; ?>" class="feature-image">
@@ -35,23 +35,42 @@ if($boost):
             </div>
         </div>
     </div>
+    <?php if($boost['cards']): ?>
+        <div class="the-slide-movil d-block d-md-none">
+            <div class="boost-slide owl-carousel">
+                <?php foreach($boost['cards'] as $item): ?>
+                    <div class="card-item">
+                        <img src="<?= $item['feature_image']['url']; ?>" alt="<?= $item['feature_image']['title']; ?>" class="feature-image">
+                        <div class="content" style="background: linear-gradient(180deg, rgba(191, 162, 24, 0.00) 26.56%, <?= $item['color']; ?> 91.99%);">
+                            <img src="<?= $item['logo']['url']; ?>" alt="<?= $item['logo']['title']; ?>" class="logo">
+                            <p class="comment"><?= $item['comment']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    <?php endif; ?>
 </section>
 <script>
     $('.boost-slide').owlCarousel({
         autoplay:false,
         loop:true,
         nav:false,
-        margin:80,
         responsive:{
             0:{
                 items:1.1,
-                center:true
+                center:true,
+                autoplay:true,
+                margin:10,
             },
             640:{
-                items:2
+                items:2,
+                autoplay:true,
+                margin:40,
             },
             991:{
-                items:3
+                items:3,
+                margin:80
             }
         }
     }).css({'opacity':1});
