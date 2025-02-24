@@ -55,6 +55,9 @@
                     position: relative;
                     z-index: 1;
                     padding: 8rem 0 4rem 0;
+                    @media(max-width:768px){
+                        padding: 8rem 24px 4rem 24px;
+                    }
                     .text-content{
                         .description{
                             font-size: 32px;

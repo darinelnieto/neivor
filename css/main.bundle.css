@@ -5160,6 +5160,11 @@ section#footer-blue {
 .logos-slide-partial-f8ca70 {
   position: relative;
 }
+@media (max-width: 768px) {
+  .logos-slide-partial-f8ca70 {
+    padding-bottom: 2rem;
+  }
+}
 .logos-slide-partial-f8ca70 .svg-bottom {
   position: absolute;
   bottom: 0;
@@ -5651,6 +5656,11 @@ section#footer-blue {
   padding: 5rem 24px;
   background: #F6F9FC;
 }
+@media (max-width: 768px) {
+  .properties-you-trust-partial-88f88c {
+    padding: 3rem 24px 0.5rem 24px;
+  }
+}
 .properties-you-trust-partial-88f88c .title {
   color: #0A2540;
   font-size: 32px;
@@ -5687,6 +5697,7 @@ section#footer-blue {
   background: #FFF;
   box-shadow: 3.576px 3.576px 15px 0px #F1F1F1;
   text-align: center;
+  height: 100%;
 }
 .properties-you-trust-partial-88f88c .card-property img {
   margin: 0.7rem auto;
@@ -5892,6 +5903,14 @@ section#footer-blue {
   text-decoration: none;
   margin-bottom: 16px;
 }
+@media (max-width: 510px) {
+  .ideal-products-partial-c221ef .product-card {
+    height: auto;
+  }
+  .ideal-products-partial-c221ef .product-card .body-card {
+    padding-bottom: 0;
+  }
+}
 
 .after-banner-section-partial-b30c5f {
   padding: 7rem 24px;
@@ -6005,6 +6024,11 @@ section#footer-blue {
   position: relative;
   z-index: 1;
   padding: 8rem 0 4rem 0;
+}
+@media (max-width: 768px) {
+  .banner-partial-4607af .banner-slide .owl-item .item .row {
+    padding: 8rem 24px 4rem 24px;
+  }
 }
 .banner-partial-4607af .banner-slide .owl-item .item .row .text-content .description {
   font-size: 32px;

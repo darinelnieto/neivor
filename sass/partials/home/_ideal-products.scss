@@ -71,5 +71,11 @@
                 }
             }
         }
+        @media(max-width:510px){
+            height: auto;
+            .body-card{
+                padding-bottom: 0;
+            }
+        }
     }
 }

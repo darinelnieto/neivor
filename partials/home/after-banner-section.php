@@ -14,7 +14,7 @@ if($after_banner['enable_conten_after_banner'] === true):
 <section class="after-banner-section-partial-b30c5f">
     <div class="container">
         <div class="row">
-            <div class="col-2 d-none d-md-block">
+            <div class="col-2 mb-4 mb-md-0">
                 <div class="icon-contain">
                     <svg width="99" height="94" viewBox="0 0 99 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_437_9635)">

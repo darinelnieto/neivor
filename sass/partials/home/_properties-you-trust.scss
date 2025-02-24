@@ -1,6 +1,9 @@
 .properties-you-trust-partial-88f88c {
     padding: 5rem 24px;
     background: #F6F9FC;
+    @media(max-width:768px){
+        padding: 3rem 24px .5rem 24px;
+    }
     .title{
         color: #0A2540;
         font-size: 32px;
@@ -33,6 +36,7 @@
         background: #FFF;
         box-shadow: 3.576px 3.576px 15px 0px #F1F1F1;
         text-align: center;
+        height: 100%;
         img{
             margin: .7rem auto;
             width: 30.758px;
