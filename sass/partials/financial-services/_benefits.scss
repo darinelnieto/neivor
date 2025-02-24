@@ -1,14 +1,18 @@
 .benefits-partial-8190bc {
     background: rgba(246, 249, 252, 0.70);
     position: relative;
+    padding: 100px 0;
     .svg-top{
         position: absolute;
         right: 0;
         transform: translateY(-15%);
+        @media(max-width: 510px){
+            display: none;
+        }
     }
     .row{
         position: relative;
-        z-index: 2;
+        z-index: 2 ;
     }
     h2{
         color: #0A2540;

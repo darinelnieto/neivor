@@ -18,9 +18,7 @@ $key = 0;
     </svg>
     <div class="banner-slide owl-carousel">
         <?php foreach($banner as $item): $key++; ?>
-            <div class="item">
-                <img src="<?= $item['background_desktop']['url']; ?>" alt="<?= $item['background_desktop']['title']; ?>" class="background-desktop">
-                <img src="<?= $item['background_movil']['url']; ?>" alt="<?= $item['background_movil']['url']; ?>" class="background-movil">
+            <div class="item" style="<?= $item['background']; ?>">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-6 mb-4 mb-md-0 text-content">
@@ -28,7 +26,7 @@ $key = 0;
                                 <?= $item['description']; ?>
                             </div>
                             <?php if($item['add_cta_link'] === true && $item['cta_link']): ?>
-                                <a href="<?= $item['cta_link']['url']; ?>" target="<?= $item['cta_link']['target']; ?>" style="color:<?= $item['text_color_cta']; ?>; background:<?= $item['background_color_cta']; ?>">
+                                <a href="<?= $item['cta_link']['url']; ?>" class="cta" target="<?= $item['cta_link']['target']; ?>" style="color:<?= $item['text_color_cta']; ?>; background:<?= $item['background_color_cta']; ?>">
                                     <?= $item['cta_link']['title']; ?>
                                 </a>
                             <?php endif; ?>

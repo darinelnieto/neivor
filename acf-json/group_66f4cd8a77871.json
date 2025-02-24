@@ -20,6 +20,54 @@
             "endpoint": 0
         },
         {
+            "key": "field_67b3f53ebf0fa",
+            "label": "Enable background image",
+            "name": "enable_background_image",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_67b3f570bf0fb",
+            "label": "Background gradient",
+            "name": "background_gradient",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67b3f53ebf0fa",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "background: linear-gradient(180deg, #7D65FE 0%, #B3A5FE 25.5%, #C4BAFF 35%, #DAD3FF 50%, #ECE8FF 65%, #F3F1FF 80%, #FFF 100%);",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_66f4cd8a27455",
             "label": "Desktop background",
             "name": "desktop_background",
@@ -27,7 +75,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67b3f53ebf0fa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -52,7 +108,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67b3f53ebf0fa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -288,6 +352,54 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string"
+        },
+        {
+            "key": "field_67bbd59c84c53",
+            "label": "Enable font size by title",
+            "name": "enable_font_size_by_title",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_67bbd5f484c55",
+            "label": "font size title",
+            "name": "font_size_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67bbd59c84c53",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "40px",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_66f61a49019f9",
@@ -655,5 +767,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730251348
+    "modified": 1740364510
 }

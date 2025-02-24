@@ -36,6 +36,54 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_67bbd05e36a78",
+                    "label": "Enable background image",
+                    "name": "enable_background_image",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_67bbd0de36a79",
+                    "label": "background gradient",
+                    "name": "background_gradient",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67bbd05e36a78",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "background: linear-gradient(180deg, #7D65FE 0%, #B3A5FE 25.5%, #C4BAFF 35%, #DAD3FF 50%, #ECE8FF 65%, #F3F1FF 80%, #FFF 100%);",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_672912292b38e",
                     "label": "Background image desktop",
                     "name": "background_image_desktop",
@@ -43,7 +91,15 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67bbd05e36a78",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -68,7 +124,15 @@
                     "type": "image",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67bbd05e36a78",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -1347,5 +1411,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731105078
+    "modified": 1740362049
 }
