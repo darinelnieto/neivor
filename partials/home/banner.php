@@ -45,7 +45,7 @@ $key = 0;
     $('.banner-slide').owlCarousel({
         autoplay:true, autoplayTimeout: 5000,
         loop:true,
-        nav:true,
+        nav:false,
         dots:true,
         margin:0,
         items:1,
