@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <body <?php body_class(); ?>>
 <div id="page"> <!-- +Page container -->
-  <header id="header-wrapper" style="z-index: 9999;background: #7D65FE;position: fixed;">
+  <header id="header-wrapper">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-4">

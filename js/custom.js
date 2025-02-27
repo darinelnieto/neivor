@@ -5,7 +5,19 @@ $('#tabs-voices-by-size').on('click', '.tab-item', function(e){
     $('#slide-desktop').trigger('to.owl.carousel', this_active);
     e.preventDefault();
 });
-
+/*============= Header Stiky ==============*/
+var lastScroll = 0;
+$(window).on('scroll', function(){
+    var scrollTop = $(this).scrollTop();
+    if(lastScroll < scrollTop){
+        // Scroll down
+        $('#header-wrapper').removeClass('sticky');
+    }else if(lastScroll > scrollTop){
+        // Scroll up
+        $('#header-wrapper').addClass('sticky');
+    }
+    lastScroll = scrollTop;
+});
 /*============= FAQs =============*/
 var acc = $('.this-faq > .question');
 var i;

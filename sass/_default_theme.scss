@@ -16,12 +16,13 @@ html{
 }
 header{
     padding: 10px 24px;
-    background: rgba(217, 217, 217, 0.2);
+    background: #7D65FE;
     position: absolute;
     left: 0;
     top: 0px;
     width: 100%;
     z-index: 10;
+    z-index: 9999;
     .custom-logo-link{
         @media(max-width:768px){
             img{
@@ -100,6 +101,9 @@ header{
         }
     }
 }
+header.sticky{
+    position: fixed;
+}
 .container{
     max-width: 1159px !important;
     width: 100%;
@@ -109,4 +113,8 @@ section.has_eae_slider.elementor-section.elementor-top-section.elementor-element
 }
 section#footer-blue {
     display: none;
+}
+#wpadminbar{
+    bottom: 0;
+    top: inherit;
 }

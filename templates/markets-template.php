@@ -29,6 +29,7 @@ get_header();
         <?php get_template_part('partials/markets/regional-perspectives'); ?>
         <?php get_template_part('partials/markets/protect-your-condo'); ?>
     <?php endif; ?>
+    <?php get_template_part('partials/globals/true-history-repeat'); ?>
     <?php get_template_part('partials/markets/true-story'); ?>
     <?php if(get_field('enable_faqs_section')): ?>
         <?php get_template_part('partials/globals/fqas'); ?>
