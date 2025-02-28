@@ -6470,6 +6470,7 @@ section#footer-blue {
 }
 .nav-menu-partial-00596a .sing-in {
   position: relative;
+  width: fit-content;
 }
 .nav-menu-partial-00596a .sing-in .open-dorp-down {
   display: flex;
