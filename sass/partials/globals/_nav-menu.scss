@@ -118,7 +118,8 @@
         }
     }
     .sing-in{
-        a{
+        position: relative;
+        .open-dorp-down{
             display: flex;
             width: 129px;
             height: 38.7px;
@@ -143,6 +144,75 @@
                 margin-top: 3rem;
                 border-color: #0A2540;
                 color: #0A2540;
+            }
+        }
+        .drop-down{
+            position: absolute;
+            border-radius: 12px;
+            background: #F6F9FC;
+            padding: 12px;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 17%);
+            visibility: hidden;
+            transition: .2s;
+            &::before{
+                content: '';
+                background: #F6F9FC;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 15px;
+                height: 15px;
+            }
+            ul{
+                background: $white;
+                display: flex;
+                padding: 12px 0px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                flex: 1 0 0;
+                list-style: none;
+                margin: 0;
+                li{
+                    a{
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        flex: 1 0 0;
+                        img{
+                            display: flex;
+                            width: 24px;
+                            height: 24px;
+                            padding: 3.001px 2px 2.5px 2px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .text{
+                            color: #0A2540;
+                            font-family: Urbanist;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 150%; /* 24px */
+                            letter-spacing: 0.1px;
+                            text-decoration-line: underline;
+                            text-decoration-style: solid;
+                            text-decoration-skip-ink: none;
+                            text-decoration-thickness: auto;
+                            text-underline-offset: auto;
+                            text-underline-position: from-font;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .drop-down{
+                visibility: visible;
             }
         }
     }

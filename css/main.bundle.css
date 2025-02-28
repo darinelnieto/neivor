@@ -6468,7 +6468,10 @@ section#footer-blue {
 .nav-menu-partial-00596a li:hover .sub-menu-pop-up {
   display: block;
 }
-.nav-menu-partial-00596a .sing-in a {
+.nav-menu-partial-00596a .sing-in {
+  position: relative;
+}
+.nav-menu-partial-00596a .sing-in .open-dorp-down {
   display: flex;
   width: 129px;
   height: 38.7px;
@@ -6482,7 +6485,7 @@ section#footer-blue {
   border-radius: 28.219px;
   border: 0.968px solid #ffffff;
 }
-.nav-menu-partial-00596a .sing-in a span {
+.nav-menu-partial-00596a .sing-in .open-dorp-down span {
   text-align: center;
   font-size: 12.9px;
   font-style: normal;
@@ -6491,11 +6494,76 @@ section#footer-blue {
   letter-spacing: 0.081px;
 }
 @media (max-width: 991px) {
-  .nav-menu-partial-00596a .sing-in a {
+  .nav-menu-partial-00596a .sing-in .open-dorp-down {
     margin-top: 3rem;
     border-color: #0A2540;
     color: #0A2540;
   }
+}
+.nav-menu-partial-00596a .sing-in .drop-down {
+  position: absolute;
+  border-radius: 12px;
+  background: #F6F9FC;
+  padding: 12px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 17%);
+  visibility: hidden;
+  transition: 0.2s;
+}
+.nav-menu-partial-00596a .sing-in .drop-down::before {
+  content: "";
+  background: #F6F9FC;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+.nav-menu-partial-00596a .sing-in .drop-down ul {
+  background: #ffffff;
+  display: flex;
+  padding: 12px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  list-style: none;
+  margin: 0;
+}
+.nav-menu-partial-00596a .sing-in .drop-down ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.nav-menu-partial-00596a .sing-in .drop-down ul li a img {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 3.001px 2px 2.5px 2px;
+  justify-content: center;
+  align-items: center;
+}
+.nav-menu-partial-00596a .sing-in .drop-down ul li a .text {
+  color: #0A2540;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.1px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.nav-menu-partial-00596a .sing-in:hover .drop-down {
+  visibility: visible;
 }
 
 .nav-menu-partial-00596a.active {

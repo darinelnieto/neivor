@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $nav = get_field('nav', 'options');
 if($nav):
-$sing_in = get_field('sing_in_link', 'option');
+$sing_in = get_field('external_links', 'option');
 ?>
 <ul class="nav-menu-partial-00596a">
     <?php foreach($nav as $main_nav): ?>
@@ -52,9 +52,23 @@ $sing_in = get_field('sing_in_link', 'option');
         </li>
     <?php endforeach; if($sing_in): ?>
         <li class="sing-in">
-            <a href="<?= $sing_in['url']; ?>" target="_blank">
-                <span><?= $sing_in['title']; ?></span>
-            </a>
+            <div class="open-dorp-down">
+                <span>
+                    <?= get_field('sing_in_cta_text', 'option'); ?>
+                </span>
+            </div>
+            <div class="drop-down">
+                <ul>
+                    <?php foreach($sing_in as $item): ?>
+                        <li>
+                            <a href="<?= $item['url']; ?>" target="_blank" class="external-link">
+                                <img src="<?= $item['icon']['url']; ?>" alt="<?= $item['icon']['title']; ?>" class="icon">
+                                <span class="text"><?= $item['cta_text']; ?></span>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </li>
     <?php endif; ?>
 </ul>
