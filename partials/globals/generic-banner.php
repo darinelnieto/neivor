@@ -64,10 +64,16 @@ if(get_field('custom_style_image_desktop') === true):
                     <?php endif; ?>
                 </div>
                 <div class="col-12 col-md-6 image-contain">
-                    <div class="image-contain">
-                        <img src="<?= $desktop_image['url']; ?>" alt="<?= $desktop_image['title']; ?>" class="d-none d-md-block img-desktop">
-                        <img src="<?= $movil_image['url']; ?>" alt="<?= $movil_image['url']; ?>" class="d-block d-md-none img-movil">
-                    </div>
+                    <?php if(get_field('enable_video') === false): ?>
+                        <div class="image-contain">
+                            <img src="<?= $desktop_image['url']; ?>" alt="<?= $desktop_image['title']; ?>" class="d-none d-md-block img-desktop">
+                            <img src="<?= $movil_image['url']; ?>" alt="<?= $movil_image['url']; ?>" class="d-block d-md-none img-movil">
+                        </div>
+                    <?php else: ?>
+                        <div class="video">
+                            <?= get_field('video_url'); ?>
+                        </div>
+                    <?php endif; ?>
                     <div class="text-content d-block d-md-none">
                         <div class="description" style="color:<?= get_field('complement_text_color_movil'); ?>">
                             <?= get_field('complement_text'); ?>
@@ -123,6 +129,16 @@ if(get_field('custom_style_image_desktop') === true):
             });
         });
     </script>
+    <?php endif; if(get_field('enable_video') === true): ?>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-11 col-lg-10 mb-5">
+                    <div class="video">
+                        <?= get_field('video'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     <?php endif; ?>
 </section>
                     

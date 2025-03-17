@@ -3,10 +3,14 @@
         "post": [],
         "fqas_post": [],
         "blogs": [],
-        "protection_post":[]
+        "protection_post":[],
+        "success_stories":[]
     },
     "taxonomies": {
-        "category":[]
+        "category":[],
+        "size_cat":[],
+        "segment_cat":[],
+        "zone_cat":[]
     },
     "admin_pages":[
         "options-theme_page_acf-options-header",

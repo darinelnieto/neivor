@@ -197,3 +197,155 @@ function blog_posts(){
   ));
 }
 add_action('init', 'blog_posts', 5);
+/*=============== Exit case custom post type ===============*/
+add_theme_support('post-thumbnails');
+add_post_type_support( 'success_stories', 'thumbnail' );
+function successStories(){
+  /*====== Argument post type =====*/
+  $arg = array(
+    'public' => true,
+    'has_archive' => true,
+    'label'  => 'Success stories',
+    'menu_icon' => 'dashicons-building',
+    'supports' => ['title', 'editor', 'thumbnail'],
+    'taxonomies' => array('size_cat', 'segment_cat', 'zone_cat')
+  );
+  /*============ Register post type ============*/
+  register_post_type('success_stories', $arg);
+  /*============ Size ============*/
+  $category = array(
+    'name' => _x('Size', 'taxonomy general name'),
+    'singular_name' => _x('Size', 'taxonomy singular name'),
+    'search_items' =>  __('Search Size'),
+    'all_items' => __('All Size'),
+    'parent_item' => __('Parent Size'),
+    'parent_item_colon' => __('Parent Size:'),
+    'edit_item' => __('Edit Size'),
+    'update_item' => __('Update Size'),
+    'add_new_item' => __('Add New Size'),
+    'new_item_name' => __('New Size Name'),
+    'menu_name' => __('Size'),
+  );
+  /*========== Register taxonomy ==========*/
+  register_taxonomy('size_cat', array('success_stories'), array(
+    'hierarchical' => true,
+    'labels' => $category,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'size_cat'),
+  ));
+  /*============ Segment ============*/
+  $category = array(
+    'name' => _x('Product segment', 'taxonomy general name'),
+    'singular_name' => _x('Product segment', 'taxonomy singular name'),
+    'search_items' =>  __('Search Product segment'),
+    'all_items' => __('All Product segment'),
+    'parent_item' => __('Parent Product segment'),
+    'parent_item_colon' => __('Parent Product segment:'),
+    'edit_item' => __('Edit Product segment'),
+    'update_item' => __('Update Product segment'),
+    'add_new_item' => __('Add New Product segment'),
+    'new_item_name' => __('New Product segment Name'),
+    'menu_name' => __('Product segment'),
+  );
+  /*========== Register taxonomy ==========*/
+  register_taxonomy('segment_cat', array('success_stories'), array(
+    'hierarchical' => true,
+    'labels' => $category,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'segment_cat'),
+  ));
+  /*============ Zone ============*/
+  $category = array(
+    'name' => _x('Zone', 'taxonomy general name'),
+    'singular_name' => _x('Zone', 'taxonomy singular name'),
+    'search_items' =>  __('Search Zone'),
+    'all_items' => __('All Zone'),
+    'parent_item' => __('Parent Zone'),
+    'parent_item_colon' => __('Parent Zone:'),
+    'edit_item' => __('Edit Zone'),
+    'update_item' => __('Update Zone'),
+    'add_new_item' => __('Add New Zone'),
+    'new_item_name' => __('New Zone Name'),
+    'menu_name' => __('Zone'),
+  );
+  /*========== Register taxonomy ==========*/
+  register_taxonomy('zone_cat', array('success_stories'), array(
+    'hierarchical' => true,
+    'labels' => $category,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'zone_cat'),
+  ));
+}
+add_action('init', 'successStories', 5);
+/*============== Success histories API ==============*/
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'success-histories', '/list', array(
+      array(
+          'methods'               => WP_REST_Server::READABLE,
+          'callback'              => 'success_historie_list_handler',
+          'permission_callback'   => '__return_true',          
+      )
+  ));
+});
+/*============ Historis return ============*/
+function success_historie_list_handler($request){
+  $args = [
+    'post_type'      => 'success_stories',
+    'post_status'    => 'publish',
+    'tax_query'      => [['relation' => 'AND']],
+    'meta_query'     => [],
+    'posts_per_page' => -1,
+    'orderby'        => 'title',
+  ];
+
+  if(!empty($request['size'])){
+    $args['tax_query'][] = [
+      'taxonomy' => 'size_cat',
+      'field'    => 'slug',
+      'terms'    => $request['size']
+    ];
+  }
+  if(!empty($request['segment'])){
+    $args['tax_query'][] = [
+      'taxonomy' => 'segment_cat',
+      'field'    => 'slug',
+      'terms'    => $request['segment']
+    ];
+  }
+  if(!empty($request['zone'])){
+    $args['tax_query'][] = [
+      'taxonomy' => 'zone_cat',
+      'field'    => 'slug',
+      'terms'    => $request['zone']
+    ];
+  }
+
+  $success = new WP_Query($args);
+  $the_success = [];
+
+  if($success->have_posts()){
+    while($success->have_posts()){
+        $success->the_post();
+        $the_success[] = [
+            'feature_image'   => get_the_post_thumbnail_url() ?: '',
+            'permalink'       => get_permalink() ?: '#',
+            'title'           => get_the_title() ?: 'Sin título',
+            'short_description' => get_field('short_description') ?: '',
+            'logo'            => get_field('logo') ?: ['url' => '', 'title' => ''],
+            'color'           => get_field('primary_color_for_gradient') ?: '#000000',
+        ];
+    }
+    wp_reset_postdata();
+  }
+
+  return $the_success;
+}

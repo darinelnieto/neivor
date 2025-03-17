@@ -2,6 +2,15 @@
 
 // Ditto include zone (don't delete anything below)
 // #DittoPartials
+@import "./partials/success-stories-single/custom-part";
+@import "./partials/success-stories-single/related-post";
+@import "./partials/success-stories-single/feature-person";
+@import "./partials/success-stories-single/featured-results";
+@import "./partials/success-stories-single/solitions";
+@import "./partials/success-stories-single/challenge";
+@import "./partials/success-stories-single/banner";
+@import "./partials/blog/filter-blog";
+@import "./partials/blog/body-blog";
 @import "./partials/globals/true-history-repeat";
 @import "./partials/press-room/events";
 @import "./partials/press-room/the-most-recent";
@@ -52,6 +61,8 @@
 @import "./partials/globals/nav-menu";
 
 // #DittoTemplates
+@import "./templates/single-success-stories-template";
+@import "./templates/blog-template";
 @import "./templates/press-room-template";
 @import "./templates/about-us-template";
 @import "./templates/financial-services-gnp-template";
