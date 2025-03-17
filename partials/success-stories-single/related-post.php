@@ -12,15 +12,34 @@ $id = get_the_id();
 $size = wp_get_post_terms(get_the_ID(), 'size_cat');
 $segment = wp_get_post_terms(get_the_ID(), 'segment_cat');
 $zone = wp_get_post_terms(get_the_ID(), 'zone_cat');
-$related = new WP_Query([
+$args = [
     'post_type' => 'success_stories',
     'post_status' => 'publish',
-    'size_cat' => $size[0]->slug,
-    'segment_cat' => $segment[0]->slug,
-    'zone_cat' => $zone[0]->slug,
     'posts_per_page' => 3,
     'orderby' => 'rand'
-]);
+];
+if(!empty($size)){
+    $args['tax_query'][] = [
+        'taxonomy' => 'size_cat',
+        'field'    => 'slug',
+        'terms'    => $size[0]->slug
+    ];
+}
+if(!empty($segment)){
+    $args['tax_query'][] = [
+        'taxonomy' => 'segment_cat',
+        'field'    => 'slug',
+        'terms'    => $segment[0]->slug
+    ];
+}
+if(!empty($zone)){
+    $args['tax_query'][] = [
+        'taxonomy' => 'zone_cat',
+        'field'    => 'slug',
+        'terms'    => $zone[0]->slug
+    ];
+}
+$related = new WP_Query($args);
 $related_post = [];
 if($related->have_posts()){
     while($related->have_posts()){
