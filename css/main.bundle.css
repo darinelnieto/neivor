@@ -566,10 +566,10 @@ section#footer-blue {
 }
 
 .banner-partial-6c95c4 {
+  padding: 100px 24px;
   /*============ Video ============*/
 }
 .banner-partial-6c95c4 .banner {
-  padding: 100px 24px 0rem 24px;
   position: relative;
   height: auto;
 }
@@ -660,7 +660,7 @@ section#footer-blue {
 }
 .banner-partial-6c95c4 .banner .text-content .taxonomies-tab ul li .text .size-name {
   color: #7D65FE;
-  font-size: calc(0.8rem + 0.3vw);
+  font-size: calc(0.7rem + 0.3vw);
   font-style: normal;
   font-weight: 700;
   line-height: 1.1;
@@ -752,7 +752,7 @@ section#footer-blue {
 }
 .banner-partial-6c95c4 .video-after-banner {
   position: relative;
-  padding: 0 24px 4rem 24px;
+  padding: 0 24px;
 }
 .banner-partial-6c95c4 .video-after-banner .video {
   width: 100%;
@@ -3542,7 +3542,7 @@ section#footer-blue {
 }
 
 .gnp-banner-partial-3bdd98 {
-  padding: 8rem 0 4rem 0;
+  padding: 100px 0 4rem 0;
   position: relative;
   height: auto;
   min-height: 100vh;
@@ -6516,14 +6516,14 @@ section#footer-blue {
 }
 
 .generic-banner-partial-ec8c2e {
-  padding: 11rem 0 1rem 0;
+  padding: 100px 0 1rem 0;
   position: relative;
   height: auto;
   /*================ Nav ================*/
 }
 @media (max-width: 768px) {
   .generic-banner-partial-ec8c2e {
-    padding: 5rem 0 4rem 0;
+    padding: 5rem 24px 4rem 24px;
   }
 }
 .generic-banner-partial-ec8c2e .svg {

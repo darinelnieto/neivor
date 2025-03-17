@@ -22,8 +22,8 @@ if($zone){
     $zone_icon = get_field('icon', 'segment_cat_' . $zone[0]->term_id);
 }
 ?>
-<section class="banner-partial-6c95c4">
-    <div class="banner" style="<?= $banner['background_gradient']; ?>">
+<section class="banner-partial-6c95c4" style="<?= $banner['background_gradient']; ?>">
+    <div class="banner">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">

@@ -1,6 +1,6 @@
 .banner-partial-6c95c4 {
+    padding: 100px 24px;
     .banner{
-        padding: 100px 24px 0rem 24px;
         position: relative;
         height: auto;
         @media(max-width:768px){
@@ -81,7 +81,7 @@
                             }
                             .size-name{
                                 color:#7D65FE;
-                                font-size: calc(.8rem + .3vw);
+                                font-size: calc(.7rem + .3vw);
                                 font-style: normal;
                                 font-weight: 700;
                                 line-height: 1.1;
@@ -170,7 +170,7 @@
     /*============ Video ============*/
     .video-after-banner{
         position: relative;
-        padding: 0 24px 4rem 24px;
+        padding: 0 24px;
         .video{
             width: 100%;
             aspect-ratio: 16 / 9;
