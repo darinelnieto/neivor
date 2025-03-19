@@ -328,7 +328,7 @@ section#footer-blue {
 
 .featured-results-partial-83b742 {
   background: #ffffff;
-  padding: 40px 24px 60px 24px;
+  padding: 40px 24px 120px 24px;
 }
 .featured-results-partial-83b742 h2 {
   color: #0A2540;
@@ -6562,7 +6562,6 @@ section#footer-blue {
 }
 .generic-banner-partial-ec8c2e .banner {
   padding: 0 24px;
-  min-height: 59vh;
 }
 .generic-banner-partial-ec8c2e .banner .row {
   position: relative;
