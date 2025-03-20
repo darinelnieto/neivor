@@ -26,7 +26,7 @@ $challenge = get_field('challenge_group');
                         </div>
                     </div>
                     <div class="col-12 col-md-11">
-                        <h4><?= $item['title']; ?></h4>
+                        <h3><?= $item['title']; ?></h3>
                         <p><?= $item['description']; ?></p>
                     </div>
                 </div>

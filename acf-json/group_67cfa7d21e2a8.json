@@ -193,6 +193,26 @@
                     "new_lines": "br"
                 },
                 {
+                    "key": "field_67db72cff3521",
+                    "label": "Texts",
+                    "name": "texts",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<span class=\"puple-color\"><\/span>",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
                     "key": "field_67d54cc026ef2",
                     "label": "Project link",
                     "name": "project_link",
@@ -1469,5 +1489,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742238488
+    "modified": 1742436617
 }
