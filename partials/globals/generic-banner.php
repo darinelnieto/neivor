@@ -129,7 +129,7 @@ if(get_field('custom_style_image_desktop') === true):
             });
         });
     </script>
-    <?php endif; if(get_field('enable_video') === true): ?>
+    <?php endif; if(get_field('enable_video_after_banner') === true): ?>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-11 col-lg-10 mb-5">

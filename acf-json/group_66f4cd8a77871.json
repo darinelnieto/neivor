@@ -857,8 +857,8 @@
         },
         {
             "key": "field_67d86cbb1f6e5",
-            "label": "Enable video",
-            "name": "enable_video",
+            "label": "Enable video after banner",
+            "name": "enable_video_after_banner",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -926,5 +926,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742237021
+    "modified": 1742480171
 }
