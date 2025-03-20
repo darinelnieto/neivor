@@ -3,9 +3,6 @@
     .banner{
         position: relative;
         height: auto;
-        @media(max-width:768px){
-            padding: 5rem 24px 0rem 24px;
-        }
         .text-content{
             display: flex;
             max-width: 680px;
@@ -137,6 +134,27 @@
                 }
                 @media(max-width:768px){
                     width: 100%;
+                }
+            }
+        }
+        .texts{
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.1px;
+            align-self: stretch;
+            max-width: 583px;
+            margin-bottom: 81px;
+            @media(max-width:768px){
+                font-size: 17px;
+                margin-top: 32px;
+                margin-bottom: 24px;
+                br{
+                    display: block;
+                }
+                span{
+                    font-weight: 700;
                 }
             }
         }

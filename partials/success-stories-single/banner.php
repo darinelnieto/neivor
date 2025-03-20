@@ -32,7 +32,9 @@ if($zone){
                             <?php if($banner['project_name']): ?>
                                 <h1 class="project-name"><?= $banner['project_name']; ?></h1>
                             <?php endif; if($banner['description']): ?>
-                                <p class="description"><?= $banner['description']; ?></p>
+                                <h2 class="description"><?= $banner['description']; ?></h2>
+                            <?php endif; if($banner['texts']): ?>
+                                <p class="texts d-none d-md-block"><?= $banner['texts']; ?></p>
                             <?php endif; ?>
                         </div>
                         <div class="taxonomies-tab d-none d-md-block">
@@ -89,6 +91,10 @@ if($zone){
                     <?php else: ?>
                         <div class="video">
                             <?= $banner['video_right']; ?>
+                        </div>
+                    <?php endif; if($banner['texts']): ?>
+                        <div class="title-content d-block d-md-none">
+                            <p class="texts"><?= $banner['texts']; ?></p>
                         </div>
                     <?php endif; ?>
                 </div>
