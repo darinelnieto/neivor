@@ -1,6 +1,5 @@
 .banner-partial-4607af {
     position: relative;
-    min-height: 95vh;
     height: auto;
     @media(max-width:510px){
         min-height: 80vh;
@@ -178,9 +177,9 @@
             align-items: center;
             gap: 10px;
             position: absolute;
-            bottom: 0;
+            top: 90%;
             left: 50%;
-            transform: translate(-50%, 1rem);
+            transform: translate(-50%, -90%);
             .owl-dot{
                 outline: none;
                 width: 10px;
@@ -193,6 +192,10 @@
                 width: 15px;
                 height: 15px;
                 background: #3EC7B5;
+            }
+            @media(max-width:510px){
+                top: 100%;
+                transform: translate(-50%, -100%);
             }
         }
     }
