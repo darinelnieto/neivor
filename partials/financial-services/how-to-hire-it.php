@@ -23,7 +23,9 @@ if($manual === true){
     <div class="container">
         <div class="row">
             <div class="col-12 card-purple">
-                <h2><?= $title; ?></h2>
+                <?php if($title): ?>
+                    <h2><?= $title; ?></h2>
+                <?php endif; ?>
                 <p><?= $description; ?></p>
                 <a href="<?= $cta['url']; ?>" target="<?= $cta['target']; ?>">
                     <span><?= $cta['title']; ?></span>

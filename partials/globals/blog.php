@@ -8,7 +8,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-$blog = new WP_Query(array('post_type'=>'blogs','post_status'=>'publish', 'posts_per_page'=>3,'order'=>'DESC'));
+$enable = get_field('enable_blog_by_category');
+$cat = get_field('blog_category');
+if($enable === true){
+    $blog = new WP_Query(array('post_type'=>'blogs', 'blog_cat' => $cat->slug, 'post_status'=>'publish', 'posts_per_page'=>3,'orderby' => 'rand'));
+}else{
+    $blog = new WP_Query(array('post_type'=>'blogs','post_status'=>'publish', 'posts_per_page'=>3,'order'=>'DESC'));
+}
 if($blog->have_posts()):
 ?>
 <section class="blog-partial-b939b9">
