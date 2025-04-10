@@ -16,7 +16,7 @@ $cta = get_field('request_advice', 'option');
             <div class="col-12 card-purple">
                 <h2><?= get_field('how_to_hire_it_title', 'option'); ?></h2>
                 <p><?= get_field('how_to_hire_it_description', 'option'); ?></p>
-                <a href="https://share.hsforms.com/1cl_nbLyjT-iy2QYDL6OASAcezkj" target="<?= $cta['target']; ?>">
+                <a href="<?= $cta['url']; ?>" target="<?= $cta['target']; ?>">
                     <span><?= $cta['title']; ?></span>
                 </a>
             </div>
