@@ -7166,17 +7166,6 @@ section#footer-blue {
   position: relative;
   height: auto;
 }
-@media (max-width: 510px) {
-  .banner-partial-4607af {
-    min-height: 80vh;
-  }
-}
-@media (min-width: 1500px) {
-  .banner-partial-4607af {
-    min-height: auto;
-    overflow: hidden;
-  }
-}
 .banner-partial-4607af svg {
   position: absolute;
   bottom: 2%;
@@ -7212,7 +7201,7 @@ section#footer-blue {
 }
 .banner-partial-4607af .banner-slide .owl-item .item {
   height: auto;
-  min-height: 75vh;
+  padding-bottom: 4rem;
 }
 .banner-partial-4607af .banner-slide .owl-item .item .background-desktop {
   width: 100%;

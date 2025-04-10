@@ -64,7 +64,8 @@ $key = 0;
 </section>
 <script>
     $('.banner-slide').owlCarousel({
-        autoplay:true, autoplayTimeout: 10000,
+        autoplay:false, 
+        autoplayTimeout: 10000,
         loop:true,
         nav:false,
         dots:true,
