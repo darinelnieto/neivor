@@ -49,4 +49,40 @@ $social_networks = get_field('social_networks', 'options');
         </div>
     </div>
 </section>
+
+<script>
+  (function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // 'utm_term' validator
+    let tieneUtmTerm = false;
+    for (const key of urlParams.keys()) {
+      if (key.startsWith('utm_term')) {
+        tieneUtmTerm = true;
+        break;
+      }
+    }
+
+    if (!tieneUtmTerm) return; 
+
+    const fullQueryString = window.location.search;
+
+    // get all params 
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+
+      if (href.startsWith('http') || href.startsWith('/')) {
+        let url = new URL(href, window.location.origin);
+
+        if (!url.search) {
+          url.search = fullQueryString;
+        }
+
+        link.setAttribute('href', url.toString());
+      }
+    });
+  })();
+</script>
                     
