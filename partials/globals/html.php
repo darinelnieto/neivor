@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $enable_html = get_field('enable_html_page');
 $html_page = get_field('html_page');
-if($html_page === true):
+if($enable_html_page === true):
 ?>
 <section class="html-partial-8190bc">
-        <?= $html_page; ?>
+        <?=$html_page; ?>
 </section>
 <?php endif; ?>
