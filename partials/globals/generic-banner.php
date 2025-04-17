@@ -15,6 +15,9 @@ $validate_background = get_field('enable_background_image');
 $desktop_image = get_field('desktop_size_main_image');
 $movil_image = get_field('movil_size_main_image');
 $cta = get_field('cta_link');
+$enable_hsform = get_field('enable_form_hs');
+$hsform = get_field('script_form');
+
 if(get_field('custom_style_image_desktop') === true):
 ?>
 <style>
@@ -95,6 +98,19 @@ if(get_field('custom_style_image_desktop') === true):
             </div>
         </div>
     </div>
+
+   <?php if($enable_hsform === true):?>
+      <section class="hsform-partial-8190bc">
+         <div class="container">
+            <div class="row">
+                <div class="col-12">
+                  <?= $hsform; ?>
+                </div>
+            </div>
+         </div>  
+       </section>
+    <?php endif; ?>	
+	
     <?php
         $nav = get_field('nav');
         if(get_field('add_nav') && $nav):
