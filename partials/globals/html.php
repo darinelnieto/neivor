@@ -1,9 +1,8 @@
-   
 <?php
 /**
- * 
+ *
  * Partial Name: html-partial
- * 
+ *
  */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
