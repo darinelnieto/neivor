@@ -89,7 +89,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_67f8146fd8e4e",
+                        "field": "field_67f8146fd8e4z",
                         "operator": "==",
                         "value": "1"
                     }
@@ -122,7 +122,7 @@
            "conditional_logic": [
                 [
                     {
-                        "field": "field_67f8146fd8e4e",
+                        "field": "field_67f8146fd8e4z",
                         "operator": "==",
                         "value": "1"
                     }
