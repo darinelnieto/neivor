@@ -22,7 +22,7 @@ if($boost):
                 <?php if($boost['cards']): ?>
                     <div class="boost-slide owl-carousel d-none d-md-block">
                         <?php foreach($boost['cards'] as $item): ?>
-                            <div class="card-item">
+                            <div class="card-item" style="height: 300px;">
                                 <img src="<?= $item['feature_image']['url']; ?>" alt="<?= $item['feature_image']['title']; ?>" class="feature-image">
                                 <div class="content" style="background: linear-gradient(180deg, rgba(191, 162, 24, 0.00) 26.56%, <?= $item['color']; ?> 91.99%);">
                                     <img src="<?= $item['logo']['url']; ?>" alt="<?= $item['logo']['title']; ?>" class="logo">
