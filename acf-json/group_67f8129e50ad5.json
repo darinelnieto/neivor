@@ -70,6 +70,39 @@
             "ui_on_text": "",
             "ui_off_text": ""
         },
+        {
+            "key": "field_66f4ce6d27458",
+            "label": "hs form image",
+            "name": "hs_form_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67d85e723b5b23",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }        
     ],
     "location": [
         [
