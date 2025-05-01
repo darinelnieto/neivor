@@ -19,7 +19,7 @@ $enable_hsform = get_field('enable_form_hs');
 $hsform = get_field('script_form');
 $enable_image_form_hs_ = get_field('enable_hs_form_image');
 $hs_form_image_ = get_field('hs_form_image');
-$enable_move_image_to_right_place_hs = get_field('enable_move_image_to_right_place_hs');
+$enable_move_image_to_right_place_hs_ = get_field('enable_move_image_to_right_place_hs');
 
 if(get_field('custom_style_image_desktop') === true):
 ?>
@@ -102,7 +102,7 @@ if(get_field('custom_style_image_desktop') === true):
         </div>
     </div>
 
-    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs === false):?>
+    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
 	<section class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
@@ -119,7 +119,7 @@ if(get_field('custom_style_image_desktop') === true):
 	</section>
      <?php endif; ?>
 
-    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs === true):?>
+    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
 	<section class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
