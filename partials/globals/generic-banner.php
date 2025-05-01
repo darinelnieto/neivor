@@ -17,8 +17,8 @@ $movil_image = get_field('movil_size_main_image');
 $cta = get_field('cta_link');
 $enable_hsform = get_field('enable_form_hs');
 $hsform = get_field('script_form');
-$enable_hs_form_image = get_field('enable_hs_form_image');
-$hs_form_image = get_field('hs_form_image');
+$enable_hs_form_image_ = get_field('enable_hs_form_image');
+$hs_form_image_ = get_field('hs_form_image');
 
 if(get_field('custom_style_image_desktop') === true):
 ?>
@@ -105,12 +105,12 @@ if(get_field('custom_style_image_desktop') === true):
 	<section class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
-	            <div class="<?php echo ($enable_hs_form_image === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
+	            <div class="<?php echo ($enable_hs_form_image_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
 	                <?= $hsform; ?>
 	            </div>
 	            <?php if($enable_hs_form_image === true): ?>
 	            <div class="col-12 col-md-6">
-	                <img src="<?= $hs_form_image['icon']['url']; ?>" alt="<?= $hs_form_image['icon']['title']; ?>" class="icon normal">
+	                <img src="<?= $hs_form_image_['icon']['url']; ?>" alt="<?= $hs_form_image_['icon']['title']; ?>" class="icon normal">
 	            </div>
 	            <?php endif; ?>
 	        </div>
