@@ -19,6 +19,7 @@ $enable_hsform = get_field('enable_form_hs');
 $hsform = get_field('script_form');
 $enable_image_form_hs_ = get_field('enable_hs_form_image');
 $hs_form_image_ = get_field('hs_form_image');
+$enable_move_image_to_right_place_hs = get_field('enable_move_image_to_right_place_hs');
 
 if(get_field('custom_style_image_desktop') === true):
 ?>
@@ -101,11 +102,10 @@ if(get_field('custom_style_image_desktop') === true):
         </div>
     </div>
 
-    <?php if($enable_hsform === true):?>
+    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs === false):?>
 	<section class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
-			
 	            <div class="<?php echo ($enable_image_form_hs_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
 	                <?= $hsform; ?>
 	            </div>
@@ -114,6 +114,23 @@ if(get_field('custom_style_image_desktop') === true):
                             <img src="<?= $hs_form_image_['url']; ?>" alt="<?= $hs_form_image_['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
 	            </div>
 	            <?php endif; ?>
+	        </div>
+	    </div>  
+	</section>
+     <?php endif; ?>
+
+    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs === true):?>
+	<section class="hsform-partial-8190bc">
+	    <div class="container">
+	        <div class="row">
+		   <?php if($enable_image_form_hs_ === true): ?>
+	              <div class="col-12 col-md-6">
+                            <img src="<?= $hs_form_image_['url']; ?>" alt="<?= $hs_form_image_['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
+	             </div>
+	           <?php endif; ?>	
+	            <div class="<?php echo ($enable_image_form_hs_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
+	                <?= $hsform; ?>
+	            </div>
 	        </div>
 	    </div>  
 	</section>
