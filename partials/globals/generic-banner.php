@@ -101,22 +101,23 @@ if(get_field('custom_style_image_desktop') === true):
         </div>
     </div>
 
-	<?php if($enable_hsform === true):?>
+    <?php if($enable_hsform === true):?>
 	<section class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
+			
 	            <div class="<?php echo ($enable_image_form_hs_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
 	                <?= $hsform; ?>
 	            </div>
 	            <?php if($enable_image_form_hs_ === true): ?>
 	            <div class="col-12 col-md-6">
-	                <img src="<?= $hs_form_image_['icon']['url']; ?>" alt="<?= $hs_form_image_['icon']['title']; ?>" class="icon normal">
+                            <img src="<?= $hs_form_image_['url']; ?>" alt="<?= $hs_form_image_['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
 	            </div>
 	            <?php endif; ?>
 	        </div>
 	    </div>  
 	</section>
-	<?php endif; ?>
+     <?php endif; ?>
 	
     <?php
         $nav = get_field('nav');
