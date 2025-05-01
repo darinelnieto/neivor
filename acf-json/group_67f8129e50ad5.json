@@ -49,7 +49,27 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
-        }
+        },
+        {
+            "key": "field_67f8146fd8e4e",
+            "label": "Enable Image form hs",
+            "name": "enable_image_form_hs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
     ],
     "location": [
         [
