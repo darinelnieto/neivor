@@ -22,7 +22,7 @@ if($boost):
                 <?php if($boost['cards']): ?>
                     <div class="boost-slide owl-carousel d-none d-md-block">
                         <?php foreach($boost['cards'] as $item): ?>
-                            <div class="card-item">
+                            <div class="card-item" style="height: 300px;">
                                 <img src="<?= $item['feature_image']['url']; ?>" alt="<?= $item['feature_image']['title']; ?>" class="feature-image">
                                 <div class="content" style="background: linear-gradient(180deg, rgba(191, 162, 24, 0.00) 26.56%, <?= $item['color']; ?> 91.99%);">
                                     <img src="<?= $item['logo']['url']; ?>" alt="<?= $item['logo']['title']; ?>" class="logo">
@@ -39,7 +39,7 @@ if($boost):
         <div class="the-slide-movil d-block d-md-none">
             <div class="boost-slide owl-carousel">
                 <?php foreach($boost['cards'] as $item): ?>
-                    <div class="card-item">
+                    <div class="card-item" style="height: 300px;">
                         <img src="<?= $item['feature_image']['url']; ?>" alt="<?= $item['feature_image']['title']; ?>" class="feature-image">
                         <div class="content" style="background: linear-gradient(180deg, rgba(191, 162, 24, 0.00) 26.56%, <?= $item['color']; ?> 91.99%);">
                             <img src="<?= $item['logo']['url']; ?>" alt="<?= $item['logo']['title']; ?>" class="logo">
@@ -55,7 +55,8 @@ if($boost):
     $('.boost-slide').owlCarousel({
         autoplay:false,
         loop:true,
-        nav:false,
+        nav:false,touchDrag: true,
+        mouseDrag: true,
         responsive:{
             0:{
                 items:1.1,
