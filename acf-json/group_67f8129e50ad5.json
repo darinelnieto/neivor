@@ -102,7 +102,27 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
-        }        
+        },
+        {
+            "key": "field_67f8146fd8e4e",
+            "label": "Move image to right place",
+            "name": "enable_move_image_to_right_place_hs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
     ],
     "location": [
         [
