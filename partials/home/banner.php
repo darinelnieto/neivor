@@ -71,8 +71,8 @@ $key = 0;
         dots:true,
         margin:0,
         items:1,
-        touchDrag: false,
-        mouseDrag: false
+        touchDrag: true,
+        mouseDrag: true
     }).css({'opacity':1});
 </script>
 <?php endif; ?>
