@@ -17,7 +17,7 @@ $movil_image = get_field('movil_size_main_image');
 $cta = get_field('cta_link');
 $enable_hsform = get_field('enable_form_hs');
 $hsform = get_field('script_form');
-$enable_hs_form_image_ = get_field('enable_hs_form_image');
+$enable_image_form_hs_ = get_field('enable_image_form_hs');
 $hs_form_image_ = get_field('hs_form_image');
 
 if(get_field('custom_style_image_desktop') === true):
