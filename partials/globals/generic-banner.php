@@ -18,7 +18,7 @@ $cta = get_field('cta_link');
 $enable_hsform = get_field('enable_form_hs');
 $hsform = get_field('script_form');
 $enable_image_form_hs_ = get_field('enable_hs_form_image');
-$hs_form_image_ = get_field('hs_form_image');
+$hs_form_image2 = get_field('hs_form_image');
 $enable_move_image_to_right_place_hs_ = get_field('enable_move_image_to_right_place_hs');
 
 if(get_field('custom_style_image_desktop') === true):
@@ -28,6 +28,9 @@ if(get_field('custom_style_image_desktop') === true):
         max-width:<?= get_field('max_width_desktop'); ?> !important;
         margin:<?= get_field('margin_desktop'); ?> !important;
     }
+	html {
+  scroll-behavior: smooth;
+}
 </style>
 <?php 
     endif; 
@@ -102,39 +105,36 @@ if(get_field('custom_style_image_desktop') === true):
         </div>
     </div>
 
-    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
-	<section class="hsform-partial-8190bc">
-	    <div class="container">
-	        <div class="row">
-	            <div class="<?php echo ($enable_image_form_hs_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
-	                <?= $hsform; ?>
-	            </div>
-	            <?php if($enable_image_form_hs_ === true): ?>
-	            <div class="col-12 col-md-6">
-                            <img src="<?= $hs_form_image_['url']; ?>" alt="<?= $hs_form_image_['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	            </div>
-	            <?php endif; ?>
-	        </div>
-	    </div>  
-	</section>
-     <?php endif; ?>
 
-    <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
-	<section class="hsform-partial-8190bc">
+    <?php if($enable_hsform === true):?>
+	<section id="hsform" class="hsform-partial-8190bc">
 	    <div class="container">
 	        <div class="row">
-		   <?php if($enable_image_form_hs_ === true): ?>
-	              <div class="col-12 col-md-6">
-                            <img src="<?= $hs_form_image_['url']; ?>" alt="<?= $hs_form_image_['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	             </div>
-	           <?php endif; ?>	
-	            <div class="<?php echo ($enable_image_form_hs_ === true) ? 'col-12 col-md-6' : 'col-12'; ?>">
+			 <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
+	            <div class="col-12 col-md-6">
 	                <?= $hsform; ?>
 	            </div>
+	           
+	            <div class="col-12 col-md-6">
+                    <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
+	            </div>
+	         <?php endif; ?>
+			<?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
+			<div class="col-12 col-md-6">
+                       <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
+	             </div>
+	           	
+	            <div class="col-12 col-md-6">
+	                <?= $hsform; ?>
+	            </div>
+			<?php endif; ?>
 	        </div>
 	    </div>  
 	</section>
      <?php endif; ?>
+	 
+    
+	 
 	
     <?php
         $nav = get_field('nav');
