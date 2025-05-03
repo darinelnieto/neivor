@@ -42,7 +42,7 @@ if($zone){
                                 <?php if($size): ?>
                                     <li>
                                         <div class="icon">
-                                            <img src="<?= $size_icon['url']; ?>" alt="<?= $size_icon['title']; ?>" class="icon">
+                                            <img src="https://www.neivor.com/wp-content/uploads/2025/03/Group-2.png" alt="Edificio" class="icon">
                                         </div>
                                         <div class="text">
                                             <span class="size"><?php if(get_bloginfo("language") == "en-US"): ?>Size<?php else: ?>Tamaño<?php endif; ?></span>
