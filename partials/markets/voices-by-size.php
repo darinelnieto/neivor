@@ -96,14 +96,14 @@ if(get_field('enable_voices_by_size')):
                             autoplay:true,
                             loop:true,
                             nav:false,
-                            dots:true,smartSpeed:2000,
+                            dots:true,smartSpeed:12000,
                             margin:10,
                             items:1,
                         }).css({'opacity':1});
                         $('#slide-desktop').owlCarousel({
                             autoplay:true,
                             loop:true,
-                            nav:false,smartSpeed:2000,
+                            nav:false,smartSpeed:12000,
                             dots:true,
                             margin:10,
                             items:1,
