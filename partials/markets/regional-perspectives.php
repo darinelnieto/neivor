@@ -148,8 +148,8 @@ if(get_field('enable_regional_perspectives')):
     </div>
     <script>
         $('.regional-slide').owlCarousel({
-            autoplay:true,
-            loop:true,
+            autoplay:false,
+            loop:false,
             nav:false,
             navText:[
                 `<svg xmlns="http://www.w3.org/2000/svg" width="52" height="57" viewBox="0 0 52 57" fill="none">
