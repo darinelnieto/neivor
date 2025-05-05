@@ -28,7 +28,7 @@ if(get_field('enable_voices_by_size')):
                                 <li class="item-tab-<?= $key; ?> <?php if($key === 0): ?>active<?php endif; ?>">
                                     <a href="#" data-tab="<?= $key; ?>" class="tab-item">
                                         <div class="icon">
-                                            <img src="<?= $tab['icon']['url']; ?>" alt="<?= $tab['icon']['title']; ?>">
+                                            <img style="min-height:150px !important" src="<?= $tab['icon']['url']; ?>" alt="<?= $tab['icon']['title']; ?>">
                                         </div>
                                         <div class="texts">
                                             <span class="name"><?= $tab['address']; ?></span>
@@ -48,7 +48,7 @@ if(get_field('enable_voices_by_size')):
                                         <p class="description"><?= $item['descriptions']; ?></p>
                                         <div class="end-content">
                                             <span class="name">
-                                                <a href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>  
+                                                <a style="color:#7D65FE" href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>  
                                             </span>
                                             <span><?= $item['units']; ?></span>
                                         </div>
@@ -96,14 +96,14 @@ if(get_field('enable_voices_by_size')):
                             autoplay:true,
                             loop:true,
                             nav:false,
-                            dots:true,
+                            dots:true,smartSpeed:2000,
                             margin:10,
                             items:1,
                         }).css({'opacity':1});
                         $('#slide-desktop').owlCarousel({
                             autoplay:true,
                             loop:true,
-                            nav:false,
+                            nav:false,smartSpeed:2000,
                             dots:true,
                             margin:10,
                             items:1,
