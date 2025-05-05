@@ -26,9 +26,9 @@ if(get_field('enable_voices_by_size')):
                         <ul>
                             <?php foreach($voices_by_size['items'] as $tab): $key++; ?>
                                 <li class="item-tab-<?= $key; ?> <?php if($key === 0): ?>active<?php endif; ?>">
-                                    <a href="#" data-tab="<?= $key; ?>" class="tab-item">
+                                    <a href="#" rel="nofollow" data-tab="<?= $key; ?>" class="tab-item">
                                         <div class="icon">
-                                            <img style="min-height:150px !important" src="<?= $tab['icon']['url']; ?>" alt="<?= $tab['icon']['title']; ?>">
+                                            <img src="<?= $tab['icon']['url']; ?>" alt="<?= $tab['icon']['title']; ?>">
                                         </div>
                                         <div class="texts">
                                             <span class="name"><?= $tab['address']; ?></span>
@@ -54,7 +54,7 @@ if(get_field('enable_voices_by_size')):
                                         </div>
                                     </div>
                                     <div class="image-contain">
-                                        <img src="<?= $item['photo']['url']; ?>" alt="<?= $item['photo']['title']; ?>">
+                                        <img style="min-height:150px !important" src="<?= $item['photo']['url']; ?>" alt="<?= $item['photo']['title']; ?>">
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -79,13 +79,13 @@ if(get_field('enable_voices_by_size')):
                                         <p class="description"><?= $item['descriptions']; ?></p>
                                         <div class="end-content">
                                             <span class="name">
-                                                 <a href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>   
+                                                 <a style="color:#7D65FE" href="<?= $item['link']['url']; ?>" target="<?= $item['link']['target']; ?>"><?= $item['link']['title']; ?></a>   
                                             </span>
                                             <span><?= $item['units']; ?></span>
                                         </div>
                                     </div>
                                     <div class="image-contain">
-                                        <img src="<?= $item['photo']['url']; ?>" alt="<?= $item['photo']['title']; ?>">
+                                        <img style="min-height:150px !important" src="<?= $item['photo']['url']; ?>" alt="<?= $item['photo']['title']; ?>">
                                     </div>
                                 </div>
                             </div>
