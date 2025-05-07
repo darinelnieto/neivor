@@ -12,11 +12,31 @@ $nav = get_field('nav', 'options');
 if($nav):
 $sing_in = get_field('external_links', 'option');
 ?>
+<style>
+   .main-menu-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.caret-icon {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
+</style>   
 <ul class="nav-menu-partial-00596a">
     <?php foreach($nav as $main_nav): ?>
         <li>
             <span class="main-menu-name">
-                <?= $main_nav['name_menu']; ?>
+                <?= $main_nav['name_menu']; ?> 
+                <?php if($main_nav['sub_menu']): ?>
+                    <svg class="caret-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                <?php endif; ?>
             </span>
             <?php if($main_nav['sub_menu']): ?>
                 <div class="sub-menu-pop-up" style="<?php if($main_nav['nav_max_width']): ?>min-width:<?= $main_nav['nav_max_width']; ?><?php else: ?>min-width:564px;<?php endif; ?>">
@@ -72,4 +92,25 @@ $sing_in = get_field('external_links', 'option');
         </li>
     <?php endif; ?>
 </ul>
-<?php endif; ?>          
+<?php endif; ?>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const menuItems = document.querySelectorAll('.nav-menu-partial-00596a li');
+
+  menuItems.forEach(function(item) {
+    const caret = item.querySelector('.caret-icon');
+    const subMenu = item.querySelector('.sub-menu-pop-up');
+
+    if (caret && subMenu) {
+      item.addEventListener('mouseenter', () => {
+        caret.style.transform = 'rotate(180deg)';
+      });
+
+      item.addEventListener('mouseleave', () => {
+        caret.style.transform = 'rotate(0deg)';
+      });
+    }
+  });
+});
+
+</script>
