@@ -71,8 +71,15 @@ $sing_in = get_field('external_links', 'option');
             <?php endif; ?>
         </li>
     <?php endforeach; if($sing_in): ?>
-        <li class="sing-in">
-            <div class="open-dorp-down">
+         <li class="sing-in">
+            <div onclick="window.location.href='https://www.neivor.com/agenda-una-demo-asesoria/'" class="open-dorp-down" style="background: #ffbf3f;color: black;border: black; width:100px">
+                <span>
+                    <?= get_field('see_demo_text', 'option'); ?>
+                </span>
+            </div>
+         </li>
+        <li class="sing-in" style="margin: 0;">
+            <div class="open-dorp-down" style="width:100px">
                 <span>
                     <?= get_field('sing_in_cta_text', 'option'); ?>
                 </span>
