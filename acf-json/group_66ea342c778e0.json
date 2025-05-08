@@ -248,6 +248,26 @@
             "append": ""
         },
         {
+            "key": "field_673237bee7c16",
+            "label": "See demo text",
+            "name": "see_demo_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67c24400ae564",
             "label": "External links",
             "name": "external_links",
