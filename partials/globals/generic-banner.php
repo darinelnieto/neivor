@@ -71,6 +71,32 @@ if(get_field('custom_style_image_desktop') === true):
                             <p><?= get_field('text_after_the_cta'); ?></p>
                         </div>
                     <?php endif; ?>
+
+
+    <?php if($enable_hsform === true):?>
+	        <div class="row">
+			 <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
+	            <div class="col-12 col-md-6">
+	                <?= $hsform; ?>
+	            </div>
+	           
+	            <div class="col-12 col-md-6">
+                    <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
+	            </div>
+	         <?php endif; ?>
+			<?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
+			<div class="col-12 col-md-6">
+                       <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
+	             </div>
+	           	
+	            <div class="col-12 col-md-6">
+	                <?= $hsform; ?>
+	            </div>
+			<?php endif; ?>
+	        </div>
+     <?php endif; ?>
+
+			
                 </div>
                 <div class="col-12 col-md-6 image-contain">
                     <?php if(get_field('enable_video') === false): ?>
@@ -106,32 +132,7 @@ if(get_field('custom_style_image_desktop') === true):
     </div>
 
 
-    <?php if($enable_hsform === true):?>
-	<section id="hsform" class="hsform-partial-8190bc">
-	    <div class="container">
-	        <div class="row">
-			 <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
-	            <div class="col-12 col-md-6">
-	                <?= $hsform; ?>
-	            </div>
-	           
-	            <div class="col-12 col-md-6">
-                    <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	            </div>
-	         <?php endif; ?>
-			<?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
-			<div class="col-12 col-md-6">
-                       <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	             </div>
-	           	
-	            <div class="col-12 col-md-6">
-	                <?= $hsform; ?>
-	            </div>
-			<?php endif; ?>
-	        </div>
-	    </div>  
-	</section>
-     <?php endif; ?>
+
 	 
     
 	 
