@@ -56,7 +56,7 @@ if(get_field('custom_style_image_desktop') === true):
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0 text-content">
                     <h1 class="title" style="color:<?= get_field('text_color'); ?><?php if(get_field('enable_font_size_by_title') === true): ?>; font-size:<?= get_field('font_size_title'); ?><?php endif; ?>"><?= get_field('main_text'); ?></h1>
-                    <div class="description d-none d-md-block" style="color:<?= get_field('text_color'); ?>">
+                    <div class="description" style="margin-bottom: 30px; color:<?= get_field('text_color'); ?>">
                         <?= get_field('complement_text'); ?>
                     </div>
                     <?php if(get_field('add_cta_link') === true && $cta): ?>
