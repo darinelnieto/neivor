@@ -12,7 +12,6 @@ get_header();
 ?>
 <main id="financial-services-template-c8ceb6">
     <?php get_template_part('partials/globals/generic-banner'); ?>
-    <?php get_template_part('partials/financial-services/hs-form'); ?>
     <?php get_template_part('partials/financial-services/benefits'); ?>
     <?php get_template_part('partials/financial-services/how-it-works'); ?>
     <?php 
