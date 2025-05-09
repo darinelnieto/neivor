@@ -75,24 +75,9 @@ if(get_field('custom_style_image_desktop') === true):
 
     <?php if($enable_hsform === true):?>
 	        <div class="row">
-			 <?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === false):?>
-	            <div class="col-12 col-md-6">
+	            <div class="col-12 col-md-12">
 	                <?= $hsform; ?>
 	            </div>
-	           
-	            <div class="col-12 col-md-6">
-                    <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	            </div>
-	         <?php endif; ?>
-			<?php if($enable_hsform === true && $enable_move_image_to_right_place_hs_ === true):?>
-			<div class="col-12 col-md-6">
-                       <img src="<?= $hs_form_image2['url']; ?>" alt="<?= $hs_form_image2['title']; ?>" class="d-none d-md-block img-desktop" style="padding: 8px;border-radius: 32px;">
-	             </div>
-	           	
-	            <div class="col-12 col-md-6">
-	                <?= $hsform; ?>
-	            </div>
-			<?php endif; ?>
 	        </div>
      <?php endif; ?>
 
