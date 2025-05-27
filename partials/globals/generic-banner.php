@@ -95,9 +95,6 @@ if(get_field('custom_style_image_desktop') === true):
                         </div>
                     <?php endif; ?>
                     <div class="text-content d-block d-md-none">
-                        <div class="description" style="color:<?= get_field('complement_text_color_movil'); ?>">
-                            <?= get_field('complement_text'); ?>
-                        </div>
                         <?php if(get_field('add_cta_link') === true && $cta): ?>
                             <a href="<?= $cta['url']; ?>" class="cta d-flex d-md-none" target="<?= $cta['target']; ?>" style="color:<?= get_field('text_color_cta'); ?>; background:<?= get_field('background_cta'); ?>">
                                 <?= $cta['title']; ?>
