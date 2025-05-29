@@ -71,8 +71,8 @@ $sing_in = get_field('external_links', 'option');
             <?php endif; ?>
         </li>
     <?php endforeach; if($sing_in): ?>
-         <li class="sing-in">
-            <div onclick="window.location.href='https://www.neivor.com/agenda-una-demo-asesoria/'" class="open-dorp-down" style="background: #ffbf3f;color: black;border: black; width:100px">
+         <li class="sing-in pulse-animation">
+            <div onclick="window.location.href='https://www.neivor.com/agenda-una-demo-asesoria/'" class="open-dorp-down" style="background: linear-gradient(90deg, #FFB300 0%, #FFD700 100%);color: black;border: black; width:100px">
                 <span>
                     <?= get_field('see_demo_text', 'option'); ?>
                 </span>
