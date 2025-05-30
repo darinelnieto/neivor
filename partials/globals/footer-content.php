@@ -1,14 +1,14 @@
    
 <?php
 /**
- * 
+ *
  * Partial Name: footer-content
- * 
+ *
  */
-if ( ! defined( 'ABSPATH' ) ) {
-    exit; // Exit if accessed directly.
+if (!defined("ABSPATH")) {
+    exit(); // Exit if accessed directly.
 }
-$social_networks = get_field('social_networks', 'options');
+$social_networks = get_field("social_networks", "options");
 ?>
         <style>
             @layer figreset,figoverridable,reset,theme,base,figutils,components,utilities;@layer figreset {
@@ -445,6 +445,7 @@ $social_networks = get_field('social_networks', 'options');
                 position: relative;
                 flex-shrink: 0;
                 align-self: stretch;
+                margin-top: 2rem;
             }
 
             #container .css-bpd33r {
@@ -685,6 +686,7 @@ $social_networks = get_field('social_networks', 'options');
             #container .css-qc1st9 {
                 font-variation-settings: normal;
                 color: #1A1727;
+                text-decoration : none;
                 --paragraph-spacing: 0px;
                 --list-spacing: 0px;
                 --letter-spacing: 0.10000000149011612px;
@@ -693,7 +695,7 @@ $social_networks = get_field('social_networks', 'options');
             #container .css-ar07fa {
                 white-space: pre-wrap;
                 line-height: 1.5;
-                font-size: 13px;
+                font-size: 15px;
                 font-family: "Urbanist:SemiBold", sans-serif;
                 word-break: break-word;
                 font-weight: 600;
@@ -730,7 +732,7 @@ $social_networks = get_field('social_networks', 'options');
 
             #container .css-ydwgaq {
                 white-space: pre-wrap;
-                line-height: 1.5;
+                line-height: 0.5;
             }
 
             #container .css-8ul899 {
@@ -814,6 +816,7 @@ $social_networks = get_field('social_networks', 'options');
                 letter-spacing: 0.10000000149011612px;
                 text-align: left;
                 line-height: 0;
+                text-decoration: none;
             }
 
             #container .css-mzqxot {
@@ -977,7 +980,7 @@ $social_networks = get_field('social_networks', 'options');
 
             #container .css-evv1mn {
                 white-space: pre;
-                line-height: 1.5;
+                line-height: 0.5;
             }
 
             #container .css-i5gp16 {
@@ -993,6 +996,7 @@ $social_networks = get_field('social_networks', 'options');
                 position: relative;
                 border-radius: inherit;
                 padding: 0px;
+                margin-top : 2rem;
             }
 
             #container .css-42csuh {
@@ -1028,6 +1032,7 @@ $social_networks = get_field('social_networks', 'options');
                 letter-spacing: 0.10000000149011612px;
                 text-align: left;
                 line-height: 0;
+                text-decoration: none;
             }
 
             #container .css-ebyb8 {
@@ -1276,10 +1281,16 @@ $social_networks = get_field('social_networks', 'options');
                                     <div class="css-i5gtd1 css-5knerd">
                                         <div class="css-fokp20 css-7js8wp css-i5gtd1">
                                             <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('copyright', 'option'); ?></p>
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field(
+                                                    "copyright",
+                                                    "option"
+                                                ) ?></p>
                                             </div>
                                             <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                            <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>                                                
+                                            <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field(
+                                                "address",
+                                                "option"
+                                            ) ?></p>                                                
                                             </div>
                                         </div>
                                     </div>
@@ -1306,7 +1317,13 @@ $social_networks = get_field('social_networks', 'options');
                                                                     <div class="css-vfwpqw css-7js8wp">
                                                                         <div class="css-opu8dy css-wc1msa" data-isimage="true">
                                                                             <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                                <img src="<?= esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Neivor logo" class="logo-footer">
+                                                                                <img src="<?= esc_url(
+                                                                                    wp_get_attachment_url(
+                                                                                        get_theme_mod(
+                                                                                            "custom_logo"
+                                                                                        )
+                                                                                    )
+                                                                                ) ?>" alt="Neivor logo" class="logo-footer">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1318,67 +1335,38 @@ $social_networks = get_field('social_networks', 'options');
                                             </div>
                                             <div class="css-5knerd">
                                                 <div class="css-d034xb css-7js8wp">
+                                                  <?php if (
+                                                      $social_networks
+                                                  ): ?>
+                                                  <?php foreach ($social_networks as $item): ?>
                                                     <div class="css-b0oug5 css-5knerd">
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/6971c58aa70bbc1e51af2b9cf3e16bc578a553aa.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                  <a href="<?= $item[
+                                                                      "url"
+                                                                  ] ?>" target="_blank">
+                                                                    <?= $item[
+                                                                        "fontawesome_icon"
+                                                                    ] ?>
+                                                                  </a>
                                                                 </div>
                                                             </div>
                                                             <div class="css-1ogtb2 css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/41e15fdc7c647e98f9f7f8208fb948ab85ac1318.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                  <a href="<?= $item[
+                                                                      "url"
+                                                                  ] ?>" target="_blank">
+                                                                    <?= $item[
+                                                                        "fontawesome_icon"
+                                                                    ] ?>
+                                                                  </a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="css-b0oug5 css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/d761b8bf07b7891235568b219fb2ba14af3c68f7.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-7ckcc6 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/01c57772de035cece8b9b543fbf461beb14702e9.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-b0oug5 css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/ad191b6f5930d90fa83be08364f6b1c4c21ec1b8.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-y6gq72 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/d396d3e50af1c212e10f8416bfeb0b80350745d9.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-b0oug5 css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/d5f554694222ebd4e6b7c3a88ea648fe81f53fe8.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img loading="lazy" src="_assets/v8/74ac514f3cb535b637244882fa673b3ce988511c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-qnxlx7 css-wc1msa" data-isimage="true">
-                                                        <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                            <img loading="lazy" src="_assets/v8/766b2fe35a413ccd790e3544bf1fa2be5893c83b.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                        </div>
-                                                    </div>
+                                                    <?php endforeach; ?>
+                                                  <?php endif; ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -1516,10 +1504,16 @@ $social_networks = get_field('social_networks', 'options');
                                     <div class="css-uaaaod">
                                         <div class="css-m4mih0 css-7js8wp css-v27th6">
                                             <a class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>                                         
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field(
+                                                    "address",
+                                                    "option"
+                                                ) ?></p>                                         
                                             </a>
                                             <a class="textContents css-wc1msa css-3pu501 css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing"><?= get_field('copyright', 'option'); ?></p>
+                                                <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing"><?= get_field(
+                                                    "copyright",
+                                                    "option"
+                                                ) ?></p>
                                             </a>
                                         </div>
                                     </div>
