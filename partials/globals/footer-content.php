@@ -838,18 +838,8 @@ $social_networks = get_field('social_networks', 'options');
                 --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 1280px) - (var(--content-margin-x-scaled, 0px) * 2));
                 --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 1080px);
                 overflow: clip;
-                background-color: #FFF;
+                background-color: #f5f8fa;
             }
-
-            #container .css-g1qjki {
-                width: auto;
-                height: 501px;
-                left: 0;
-                right: 0;
-                top: auto;
-                bottom: 0;
-            }
-
             #container .css-sa9thz {
                 box-sizing: border-box;
                 display: flex;
@@ -1286,10 +1276,10 @@ $social_networks = get_field('social_networks', 'options');
                                     <div class="css-i5gtd1 css-5knerd">
                                         <div class="css-fokp20 css-7js8wp css-i5gtd1">
                                             <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing">2025 Neivor. Todos los derechos reservados</p>
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('copyright', 'option'); ?></p>
                                             </div>
                                             <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing">Oficina Neivor Edificio Ritz Carlton: México: Av. P.º de la Reforma 509-Piso 16, Cuauhtémoc, 06500 Ciudad de México, CDMX</p>
+                                            <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>                                                
                                             </div>
                                         </div>
                                     </div>
@@ -1316,7 +1306,7 @@ $social_networks = get_field('social_networks', 'options');
                                                                     <div class="css-vfwpqw css-7js8wp">
                                                                         <div class="css-opu8dy css-wc1msa" data-isimage="true">
                                                                             <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                                <img loading="lazy" src="_assets/v8/5ab3b09ec8eb0716c224260b66801b8ade19a43d.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                                <img src="<?= esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Neivor logo" class="logo-footer">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1526,10 +1516,10 @@ $social_networks = get_field('social_networks', 'options');
                                     <div class="css-uaaaod">
                                         <div class="css-m4mih0 css-7js8wp css-v27th6">
                                             <a class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-owgos1 css-gpop2m  adjustLetterSpacing">Oficina Neivor Edificio Ritz Carlton: México: Av. P.º de la Reforma 509-Piso 16, Cuauhtémoc, 06500 Ciudad de México, CDMX</p>
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>                                         
                                             </a>
                                             <a class="textContents css-wc1msa css-3pu501 css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing">2025 Neivor. Todos los derechos reservados</p>
+                                                <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing"><?= get_field('copyright', 'option'); ?></p>
                                             </a>
                                         </div>
                                     </div>
