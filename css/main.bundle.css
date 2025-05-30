@@ -7411,7 +7411,7 @@ section#footer-blue {
 }
 .nav-menu-partial-00596a li .main-menu-name {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
 }
 .nav-menu-partial-00596a li .sub-menu-pop-up {
@@ -7458,22 +7458,23 @@ section#footer-blue {
   .nav-menu-partial-00596a li .sub-menu-pop-up .row::before {
     display: none;
   }
+  .nav-menu-partial-00596a li .sub-menu-pop-up .row .menu-pop-up:first-child {
+    margin-top: 4rem;
+  }
 }
 .nav-menu-partial-00596a li .sub-menu-pop-up .row .menu-pop-up {
   margin-bottom: 8px;
   padding: 0 6px;
 }
 
-.nav-menu-partial-00596a li .sub-menu-pop-up .row .menu-pop-up:first-child {
-  margin-top: 4rem
-}
+
 
 .nav-menu-partial-00596a li .sub-menu-pop-up .row .menu-pop-up .contain {
   display: flex;
   padding: 12px 0px;
   flex-direction: column;
   align-items: flex-start;
-  /* gap: 12px; */
+  gap: 12px;
   align-self: stretch;
   border-radius: 12px;
   background: #FFF;

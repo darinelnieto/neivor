@@ -442,7 +442,6 @@ $social_networks = get_field("social_networks", "options");
                 position: relative;
                 flex-shrink: 0;
                 align-self: stretch;
-                margin-top: 2rem;
             }
 
             #container .css-bpd33r {
@@ -1045,7 +1044,7 @@ $social_networks = get_field("social_networks", "options");
                 <div class="css-16wy77 css-trglf0 css-vd6a0u">
                     <div class="css-rt1aze css-j9f0op">
                         <div class="css-x92lyl css-7js8wp css-v27th6">
-                            <div class="css-uaaaod">
+                            <div class="css-uaaaod" style="margin-top :2rem">
                                 <div class="css-bpd33r css-7js8wp css-v27th6">
                                     <div class="css-uaaaod">
                                         <div class="css-ck97wh css-7js8wp css-v27th6">
@@ -1215,25 +1214,9 @@ $social_networks = get_field("social_networks", "options");
                                     </div>
                                     <div class="css-5knerd">
                                         <div class="css-lges1h css-7js8wp">
-                                            <div class="css-5knerd">
-                                                <div class="css-8ul899 css-j9f0op">
-                                                    <div class="css-sutng4 css-7js8wp">
-                                                        <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="css-5knerd">
-                                                <div class="css-8ul899 css-j9f0op">
-                                                    <div class="css-sutng4 css-7js8wp">
-                                                        <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Terminos y condiciones</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                          <div class="nav-policies">
+                                            <?php wp_nav_menu(['menu'=>'Footer']); ?>
+                                          </div>
                                     </div>
                                     <div class="css-i5gtd1 css-5knerd">
                                         <div class="css-fokp20 css-7js8wp css-i5gtd1">
