@@ -610,7 +610,6 @@ $social_networks = get_field("social_networks", "options");
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 32px;
                 position: relative;
                 border-radius: inherit;
                 padding: 0px;
@@ -645,7 +644,6 @@ $social_networks = get_field("social_networks", "options");
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
-                gap: 8px;
                 position: relative;
                 border-radius: inherit;
                 padding: 0px;
@@ -836,7 +834,7 @@ $social_networks = get_field("social_networks", "options");
                 --content-width: calc(var(--content-width-scaled, 100%) - (var(--content-margin-x-scaled, 0px) * 2));
                 --content-margin: 0 var(--content-margin-x-scaled, 0);
                 --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 1280px) - (var(--content-margin-x-scaled, 0px) * 2));
-                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 1080px);
+                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)));
                 overflow: clip;
                 background-color: #f5f8fa;
             }
@@ -1060,7 +1058,7 @@ $social_networks = get_field("social_networks", "options");
                                                                     <div class="css-ybmo5z css-7js8wp">
                                                                         <div class="css-gtyprt css-wc1msa" data-isimage="true">
                                                                             <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                                <img src="_assets/v8/6399feb316a9a682048150a8359e4dbd50b1f45c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                                <img src="https://cdn.neivor.com/cdn/mexico/static/neivor-rent/logo/neivor-rent-logo.svg" alt="" class="css-9j6u1t css-8zr56v"/>
                                                                             </div>
                                                                         </div>
                                                                     </div>
