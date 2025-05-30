@@ -10,609 +10,1533 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $social_networks = get_field('social_networks', 'options');
 ?>
-<!--
-<section class="footer-content-partial-7e1adc">
-    <div class="container">
-        <div class="row">
-            <div class="col-5 col-md-8 p-0">
-                <div class="logo-contain">
-                        <img src="<?= esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Neivor logo" class="logo-footer">
-                </div>
-            </div>
-            <div class="col-7 col-lg-4 p-0">
-                <?php if($social_networks): ?>
-                    <ul class="social-networks">
-                        <?php foreach($social_networks as $item): ?>
-                            <li>
-                                <a href="<?= $item['url']; ?>" target="_blank">
-                                    <?= $item['fontawesome_icon']; ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-            </div>
-            <div class="col-12 p-0">
-                <div class="nav-policies">
-                    <?php wp_nav_menu(['menu'=>'Footer']); ?>
-                </div>
-            </div>
-            <div class="col-12 p-0">
-                <div class="copy-right-and-addres-contain">
-                    <div class="address">
-                        <p><?= get_field('address', 'option'); ?></p>
-                    </div>
-                    <div class="copy-right">
-                        <p><?= get_field('copyright', 'option'); ?></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-<script>
-  (function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // 'utm_term' validator
-    let tieneUtmTerm = false;
-    for (const key of urlParams.keys()) {
-      if (key.startsWith('utm_term')) {
-        tieneUtmTerm = true;
-        break;
-      }
-    }
+        <style>
+            @layer figreset,figoverridable,reset,theme,base,figutils,components,utilities;@layer figreset {
+                :root {
+                    --100dvw: 100vw;
+                    --100dvh: 100vh
+                }
 
-    if (!tieneUtmTerm) return; 
+                @supports (width: 100dvw) {
+                    :root {
+                        --100dvw:100dvw;
+                        --100dvh: 100dvh
+                    }
+                }
+            }
 
-    const fullQueryString = window.location.search;
+            @layer figreset {
+                :root {
+                    font-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji")
+                }
 
-    // get all params 
-    const links = document.querySelectorAll('a[href]');
+                *,*:before,*:after {
+                    box-sizing: border-box
+                }
 
-    links.forEach(link => {
-      const href = link.getAttribute('href');
+                html {
+                    -webkit-text-size-adjust: 100%;
+                    -webkit-tap-highlight-color: transparent;
+                    -webkit-font-smoothing: antialiased;
+                    width: 100%
+                }
 
-      if (href.startsWith('http') || href.startsWith('/')) {
-        let url = new URL(href, window.location.origin);
+                html: has(#responsive-scaler) {
+                    scrollbar-width:none;
+                    -ms-overflow-style: none
+                }
 
-        if (!url.search) {
-          url.search = fullQueryString;
-        }
+                body {
+                    margin: 0;
+                    width: 100%
+                }
 
-        link.setAttribute('href', url.toString());
-      }
-    });
-  })();
-</script>
+                body: has([data-page-overflowx='hidden']) {
+                    overflow-x:hidden
+                }
 
+                body: has([data-page-overflowx='auto']) {
+                    overflow-x:auto
+                }
 
-<section>
+                #container {
+                    width: 100%
+                }
 
-  <script type="module">
-    import { SitesRuntime } from '/_runtimes/sites-runtime.baf2cbdcc8ea1bac5928a069cf7ceef50bace6705c42242e1daf3aedf881253e.js';
-    const sitesRuntime = new SitesRuntime({
-      container: document.getElementById('container'),
-      env: 'published',
-      bundleId: '4baf1486-44ca-4e0c-8278-259f57831027',
+                a {
+                    color: inherit;
+                    text-decoration: none
+                }
 
-      loadComponentsOverNetwork: true,
-      assetsVersion: 'v8',
-      codeComponentsVersion: 'v1',
-      wasServerRendered: true,
-      withBaseStyles: true,
-      reportingDomain: "https://www.figma.com",
-      bundleCreationDate: '2025-05-26 14:06:01 UTC',
-    });
-  </script>
+                button {
+                    border: none;
+                    background: none;
+                    padding: 0
+                }
 
-  <div id="container">
-    <div data-page-overflowx="hidden" data-breakpoint-id="node-0_6" data-breakpoint="true" data-width="375"
-      data-height="1080" class="css-ld0hsi css-j6ldtg css-ys9dmc">
-      <div class="css-16wy77 css-trglf0 css-vd6a0u">
-        <div class="css-rt1aze css-j9f0op">
-          <div class="css-x92lyl css-7js8wp css-v27th6">
-            <div class="css-uaaaod">
-              <div class="css-bpd33r css-7js8wp css-v27th6">
-                <div class="css-uaaaod">
-                  <div class="css-ck97wh css-7js8wp css-v27th6">
-                    <div class="css-uaaaod">
-                      <div class="css-g3eimm css-7js8wp css-v27th6">
-                        <div class="css-5knerd">
-                          <div class="css-n12bdu css-7js8wp">
-                            <div class="css-5knerd">
-                              <div class="css-rt1aze css-j9f0op">
-                                <div class="css-ybmo5z css-7js8wp">
-                                  <div class="css-gtyprt css-wc1msa" data-isimage="true">
-                                    <div class="css-roiesn css-wixxpz css-gs60ek">
-                                        <img src="<?= esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="Neivor logo" class="logo-footer"/>
+                h1,h2,h3,h4,h5,h6,p {
+                    font-size: inherit;
+                    font-weight: inherit
+                }
+
+                blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre {
+                    margin: 0
+                }
+
+                ol,ul,menu {
+                    list-style: none;
+                    margin: 0;
+                    padding-inline-start:1.5em}
+
+                #container .textContents {
+                    color: #ffffff00
+                }
+
+                #container .textContents.hangingList > ul,#container .textContents.hangingList > ol {
+                    margin-left: -1.5em
+                }
+
+                #container .textContents >:not(:last-child) {
+                    margin-bottom: var(--paragraph-spacing)
+                }
+
+                #container .textContents >:is(ul,ol): not(:last-child):has(+:is(ul,ol)) {
+                    margin-bottom:var(--list-spacing)
+                }
+
+                #container .textContents li {
+                    margin-bottom: var(--list-spacing)
+                }
+
+                #container .textContents >:is(ol,ul): is(:last-child,:has(+ div)) > li:last-child,#container .textContents >:is(ol,ul):is(:last-child,:has(+ div)) >:is(ol,ul):last-child > li:last-child,#container .textContents >:is(ol,ul):is(:last-child,:has(+ div)) >:is(ol,ul):last-child >:is(ol,ul):last-child > li:last-child,#container .textContents >:is(ol,ul):is(:last-child,:has(+ div)) >:is(ol,ul):last-child >:is(ol,ul):last-child >:is(ol,ul):last-child > li:last-child,#container .textContents >:is(ol,ul):is(:last-child,:has(+ div)) >:is(ol,ul):last-child >:is(ol,ul):last-child >:is(ol,ul):last-child >:is(ol,ul):last-child > li:last-child {
+                    margin-bottom:0
+                }
+
+                #container .textClip {
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent !important
+                }
+
+                #container .textClip > * {
+                    -webkit-text-fill-color: initial
+                }
+
+                #container .embed {
+                    border: none
+                }
+
+                #container .marquee-container {
+                    overflow-x: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    width: var(--width);
+                    transform: var(--transform);
+                    &:hover div {
+                        animation-play-state: var(--pause-on-hover)
+                    }
+
+                    &:active div {
+                        animation-play-state: var(--pause-on-click)
+                    }
+                }
+
+                #container .marquee {
+                    flex: 0 0 auto;
+                    min-width: var(--min-width);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+                    animation-delay: var(--delay);
+                    animation-direction: var(--direction);
+                    animation-timing-function: var(--timing-function)
+                }
+
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0%)
+                    }
+
+                    100% {
+                        transform: translateX(-100%)
+                    }
+                }
+
+                #container .marquee-initial-child-container {
+                    flex: 0 0 auto;
+                    display: flex;
+                    min-width: auto;
+                    flex-direction: row;
+                    align-items: center
+                }
+
+                #container .marquee-child {
+                    transform: var(--transform)
+                }
+
+                .code-behavior-wrapper > * {
+                    width: 100%;
+                    height: 100%
+                }
+            }
+
+            @layer figutils {
+                .textContents ul > li: before {
+                    content:'\2022';
+                    margin-left: -1.5em;
+                    display: inline-block;
+                    text-align: center;
+                    width: 1.5em;
+                    -webkit-background-clip: var(--list-marker-background-clip);
+                    -webkit-text-fill-color: var(--list-marker-text-fill-color);
+                    background-clip: var(--list-marker-background-clip);
+                    background-image: var(--list-marker-background-image);
+                    color: var(--list-marker-color);
+                    font-size: var(--list-marker-font-size);
+                    line-height: var(--list-marker-line-height);
+                    mix-blend-mode: var(--list-marker-mix-blend-mode);
+                    vertical-align: var(--list-marker-vertical-align)
+                }
+
+                .textContents ol > li: :marker {
+                    color:var(--list-marker-color);
+                    font-size: var(--list-marker-font-size);
+                    line-height: var(--list-marker-line-height);
+                    vertical-align: var(--list-marker-vertical-align)
+                }
+
+                .textContents .adjustLetterSpacing:after {
+                    content: '';
+                    margin-left: calc(var(--letter-spacing) * -1)
+                }
+            }
+        </style>
+        <style id="font-faces-1pb4q7">
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2.woff2");
+                font-display: block
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-english.woff2");
+                font-display: block;
+                unicode-range: U+0000-00A0,U+00A2-00A9,U+00AC-00AE,U+00B0-00B7,U+00B9-00BA,U+00BC-00BE,U+00D7,U+00F7,U+2000-206F,U+2074,U+20AC,U+2122,U+2190-21BB,U+2212,U+2215,U+F8FF,U+FEFF,U+FFFD
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest-latin.woff2");
+                font-display: block;
+                unicode-range: U+00A1,U+00AA-00AB,U+00AF,U+00B8,U+00BB,U+00BF-00D6,U+00D8-00F6,U+00F8-00FF,U+0131,U+0152-0153,U+02B0-02FF
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-a.woff2");
+                font-display: block;
+                unicode-range: U+0100-0130,U+0132-0151,U+0154-017F
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-b.woff2");
+                font-display: block;
+                unicode-range: U+0180-024F
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-additional.woff2");
+                font-display: block;
+                unicode-range: U+1E00-1EFF
+            }
+
+            @font-face {
+                font-family: "Urbanist:SemiBold";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest.woff2");
+                font-display: block;
+                unicode-range: U+0259,U+0300-03C0,U+2070-2073,U+2075-20AB,U+20AD-2121,U+2123-218F,U+21BC-2211,U+2213-2214,U+2216-F8FE,U+FB01-FB02
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2.woff2");
+                font-display: block
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-english.woff2");
+                font-display: block;
+                unicode-range: U+0000-00A0,U+00A2-00A9,U+00AC-00AE,U+00B0-00B7,U+00B9-00BA,U+00BC-00BE,U+00D7,U+00F7,U+2000-206F,U+2074,U+20AC,U+2122,U+2190-21BB,U+2212,U+2215,U+F8FF,U+FEFF,U+FFFD
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest-latin.woff2");
+                font-display: block;
+                unicode-range: U+00A1,U+00AA-00AB,U+00AF,U+00B8,U+00BB,U+00BF-00D6,U+00D8-00F6,U+00F8-00FF,U+0131,U+0152-0153,U+02B0-02FF
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-a.woff2");
+                font-display: block;
+                unicode-range: U+0100-0130,U+0132-0151,U+0154-017F
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-b.woff2");
+                font-display: block;
+                unicode-range: U+0180-024F
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-additional.woff2");
+                font-display: block;
+                unicode-range: U+1E00-1EFF
+            }
+
+            @font-face {
+                font-family: "Urbanist:Regular";
+                font-style: normal;
+                src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest.woff2");
+                font-display: block;
+                unicode-range: U+0259,U+0300-03C0,U+2070-2073,U+2075-20AB,U+20AD-2121,U+2123-218F,U+21BC-2211,U+2213-2214,U+2216-F8FE,U+FB01-FB02
+            }
+        </style>
+        <style id="breakpoint-css">
+            @media (width < 1280px) {
+                [data-breakpoint-id="node-0_4"] {
+                    display: none !important
+                }
+            }
+
+            @media (width >= 1280px) {
+                [data-breakpoint-id="node-0_6"] {
+                    display: none !important
+                }
+            }
+        </style>
+        <style id="body-background-color">
+            @media (max-width: 1279px) {
+                body:has([data-breakpoint-id="node-0_6"]) {
+                    background-color: #FFF
+                }
+            }
+
+            @media (min-width: 1280px) {
+                body:has([data-breakpoint-id="node-0_4"]) {
+                    background-color: #FFF
+                }
+            }
+        </style>
+        <style id="ssr-css">
+            #container .css-vh2lqg {
+                width: var(--viewport-width-scaled);
+                min-height: var(--viewport-height-scaled);
+                height: 100%;
+                top: 0px;
+            }
+
+            #container .css-tzn6qh {
+                display: block;
+                position: absolute;
+            }
+
+            #container .css-6gkcj1 {
+                transform-origin: top left;
+                --max-layout-width: 2048px;
+                --min-layout-width: 320px;
+                --max-font-size: 288px;
+                --min-font-size: 6px;
+                --viewport-width-scaled: calc(var(--100dvw) / var(--viewport-scale));
+                --viewport-height-scaled: calc(var(--100dvh) / var(--viewport-scale));
+                --content-width-scaled: calc(var(--content-width-unscaled) / var(--viewport-scale));
+                --content-margin-x-scaled: max(calc((var(--viewport-width) - var(--max-layout-width)) / var(--viewport-scale) / 2), 0px);
+            }
+
+            #container .css-ld0hsi {
+                display: block;
+                position: relative;
+            }
+
+            #container .css-j6ldtg {
+                min-width: var(--content-min-width);
+                width: 100%;
+                height: var(--content-min-height);
+            }
+
+            #container .css-ys9dmc {
+                --content-width: calc(var(--content-width-scaled, 100%) - (var(--content-margin-x-scaled, 0px) * 2));
+                --content-margin: 0 var(--content-margin-x-scaled, 0);
+                --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 375px) - (var(--content-margin-x-scaled, 0px) * 2));
+                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 1080px);
+                overflow: clip;
+                background-color: #FFF;
+            }
+
+            #container .css-16wy77 {
+                width: auto;
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: 0;
+            }
+
+            #container .css-trglf0 {
+                position: absolute;
+            }
+
+            #container .css-vd6a0u {
+                background-color: #F5F8FA;
+            }
+
+            #container .css-rt1aze {
+                border-radius: inherit;
+                position: relative;
+            }
+
+            #container .css-j9f0op {
+                width: 100%;
+                height: 100%;
+            }
+
+            #container .css-x92lyl {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 90px;
+                position: relative;
+                padding: 50px 24px;
+            }
+
+            #container .css-7js8wp {
+                align-content: stretch;
+                overflow: visible;
+            }
+
+            #container .css-v27th6 {
+                width: 100%;
+            }
+
+            #container .css-uaaaod {
+                position: relative;
+                flex-shrink: 0;
+                align-self: stretch;
+            }
+
+            #container .css-bpd33r {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 31px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-ck97wh {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 32px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-g3eimm {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 8px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-5knerd {
+                position: relative;
+                flex-shrink: 0;
+            }
+
+            #container .css-n12bdu {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 11.258623123168945px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-ybmo5z {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 6.103286147117615px;
+                position: relative;
+                padding: 4.882628917694092px;
+            }
+
+            #container .css-gtyprt {
+                width: 120.23473709821701px;
+                height: 24.41314458847046px;
+            }
+
+            #container .css-wc1msa {
+                position: relative;
+                flex-shrink: 0;
+                display: block;
+            }
+
+            #container .css-roiesn {
+                position: absolute;
+                display: block;
+            }
+
+            #container .css-wixxpz {
+                inset: 0;
+            }
+
+            #container .css-gs60ek {
+                overflow: visible;
+            }
+
+            #container .css-9j6u1t {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+            }
+
+            #container .css-8zr56v {
+                display: block;
+            }
+
+            #container .css-i5hbuo {
+                width: 268px;
+            }
+
+            #container .css-a3m5wj {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-2ljd5r {
+                width: 33.455230712890625px;
+                height: 33.455230712890625px;
+            }
+
+            #container .css-8kkpf5 {
+                display: block;
+                position: relative;
+                border-radius: inherit;
+            }
+
+            #container .css-ardmi {
+                width: auto;
+                height: auto;
+                inset: 0;
+            }
+
+            #container .css-1ogtb2 {
+                width: auto;
+                height: auto;
+                inset: 25%;
+            }
+
+            #container .css-7ckcc6 {
+                width: auto;
+                height: auto;
+                left: 24.062499403953552%;
+                right: 24.06250536441803%;
+                top: 24.062499403953552%;
+                bottom: 24.06250536441803%;
+            }
+
+            #container .css-y6gq72 {
+                width: auto;
+                height: auto;
+                left: 25%;
+                right: 25%;
+                top: 32.499998807907104%;
+                bottom: 32.499998807907104%;
+            }
+
+            #container .css-86sg77 {
+                width: 33.51377487182617px;
+                height: 33.523643493652344px;
+            }
+
+            #container .css-bkqry0 {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 32px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-tr5aoa {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 16px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-hv01ud {
+                position: relative;
+                flex-shrink: 0;
+                flex: 1 0 0;
+            }
+
+            #container .css-5dba7r {
+                min-width: 1px;
+                min-height: 1px;
+            }
+
+            #container .css-lges1h {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 8px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-vplhby {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-myl2ny {
+                position: relative;
+                flex-shrink: 0;
+                flex: 1 0 0;
+                display: block;
+            }
+
+            #container .css-9wg4zi {
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                font-size: 0px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-qc1st9 {
+                font-variation-settings: normal;
+                color: #1A1727;
+                --paragraph-spacing: 0px;
+                --list-spacing: 0px;
+                --letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-ar07fa {
+                white-space: pre-wrap;
+                line-height: 1.5;
+                font-size: 13px;
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-g9n9cb {
+                font-variation-settings: normal;
+                cursor: pointer;
+            }
+
+            #container .css-59rdls {
+                width: min-content;
+                min-width: 100%;
+            }
+
+            #container .css-1x9ayl {
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-3hwh7f {
+                font-variation-settings: normal;
+                color: #5D5C62;
+                --paragraph-spacing: 0px;
+                --list-spacing: 0px;
+                --letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-ydwgaq {
+                white-space: pre-wrap;
+                line-height: 1.5;
+            }
+
+            #container .css-8ul899 {
+                border-radius: inherit;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #container .css-sutng4 {
+                padding-top: 0px;
+                padding-bottom: 0px;
+                padding-left: 0px;
+                padding-right: 24px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+            }
+
+            #container .css-vkpzlc {
+                position: relative;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #container .css-u0y8se {
+                white-space: nowrap;
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                font-size: 0px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-az5ltz {
+                white-space: pre;
+                line-height: 1.5;
+                font-size: 13px;
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-6jeswk {
+                font-variation-settings: normal;
+                color: #1A1727;
+                cursor: pointer;
+            }
+
+            #container .css-i5gtd1 {
+                width: 306px;
+            }
+
+            #container .css-fokp20 {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 21px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-qpvddb {
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                font-size: 0px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-mzqxot {
+                white-space: pre-wrap;
+                line-height: 1.5;
+                font-size: 13px;
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-gpop2m {
+                font-variation-settings: normal;
+                color: #5D5C62;
+                cursor: pointer;
+            }
+
+            #container .css-8vmj48 {
+                --content-width: calc(var(--content-width-scaled, 100%) - (var(--content-margin-x-scaled, 0px) * 2));
+                --content-margin: 0 var(--content-margin-x-scaled, 0);
+                --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 1280px) - (var(--content-margin-x-scaled, 0px) * 2));
+                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 1080px);
+                overflow: clip;
+                background-color: #FFF;
+            }
+
+            #container .css-g1qjki {
+                width: auto;
+                height: 501px;
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: 0;
+            }
+
+            #container .css-sa9thz {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 90px;
+                position: relative;
+                padding: 32px 150px;
+            }
+
+            #container .css-l1xxg7 {
+                position: relative;
+                flex-shrink: 0;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            #container .css-4sgc {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-m4mih0 {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-x7q7ad {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 7.878458023071289px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-kujjrk {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 11.08757495880127px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-vfwpqw {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 6.010560989379883px;
+                position: relative;
+                padding: 4.808448791503906px;
+            }
+
+            #container .css-opu8dy {
+                width: 118.40805149078369px;
+                height: 24.04224395751953px;
+            }
+
+            #container .css-d034xb {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 15.9806547164917px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-b0oug5 {
+                width: 33.590450286865234px;
+                height: 33.590450286865234px;
+            }
+
+            #container .css-qnxlx7 {
+                width: 33.649234771728516px;
+                height: 33.65913772583008px;
+            }
+
+            #container .css-j0or7i {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 16px;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-hnt0es {
+                white-space: pre-wrap;
+                line-height: 1.5;
+                font-size: 15px;
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-dnsydh {
+                white-space: nowrap;
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                font-size: 15px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-evv1mn {
+                white-space: pre;
+                line-height: 1.5;
+            }
+
+            #container .css-i5gp16 {
+                width: 361px;
+            }
+
+            #container .css-islyrh {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                position: relative;
+                border-radius: inherit;
+                padding: 0px;
+            }
+
+            #container .css-42csuh {
+                white-space: pre;
+                line-height: 1.5;
+                font-size: 15px;
+                font-family: "Urbanist:SemiBold", sans-serif;
+                word-break: break-word;
+                font-weight: 600;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-i5eubj {
+                width: 630px;
+            }
+
+            #container .css-owgos1 {
+                white-space: pre-wrap;
+                line-height: 1.5;
+                font-size: 15px;
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                letter-spacing: 0.10000000149011612px;
+            }
+
+            #container .css-3pu501 {
+                white-space: nowrap;
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                font-size: 0px;
+                letter-spacing: 0.10000000149011612px;
+                text-align: left;
+                line-height: 0;
+            }
+
+            #container .css-ebyb8 {
+                white-space: pre;
+                line-height: 1.5;
+                font-size: 15px;
+                font-family: "Urbanist:Regular", sans-serif;
+                word-break: break-word;
+                font-weight: 400;
+                letter-spacing: 0.10000000149011612px;
+            }
+        </style>
+        <div id="container">
+            <div data-page-overflowx="hidden" data-breakpoint-id="node-0_6" data-breakpoint="true" data-width="375" data-height="1080" class="css-ld0hsi css-j6ldtg css-ys9dmc">
+                <div class="css-16wy77 css-trglf0 css-vd6a0u">
+                    <div class="css-rt1aze css-j9f0op">
+                        <div class="css-x92lyl css-7js8wp css-v27th6">
+                            <div class="css-uaaaod">
+                                <div class="css-bpd33r css-7js8wp css-v27th6">
+                                    <div class="css-uaaaod">
+                                        <div class="css-ck97wh css-7js8wp css-v27th6">
+                                            <div class="css-uaaaod">
+                                                <div class="css-g3eimm css-7js8wp css-v27th6">
+                                                    <div class="css-5knerd">
+                                                        <div class="css-n12bdu css-7js8wp">
+                                                            <div class="css-5knerd">
+                                                                <div class="css-rt1aze css-j9f0op">
+                                                                    <div class="css-ybmo5z css-7js8wp">
+                                                                        <div class="css-gtyprt css-wc1msa" data-isimage="true">
+                                                                            <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                                <img src="_assets/v8/6399feb316a9a682048150a8359e4dbd50b1f45c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-i5hbuo css-5knerd">
+                                                <div class="css-a3m5wj css-7js8wp css-i5hbuo">
+                                                    <div class="css-2ljd5r css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img src="_assets/v8/b7a6ebae1fb7d56a0df63e5409586f716c181f72.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
+                                                                    <img src="_assets/v8/3b7389ea8fd5f8c5accce62d0723c5accbc49fab.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-2ljd5r css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img src="_assets/v8/bd8af619a23ade279eca81536415a896fd42a807.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-7ckcc6 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
+                                                                    <img src="_assets/v8/8a26d67f677df51fe6079f251efc79f30d0cd837.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-2ljd5r css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img src="_assets/v8/87b6e778de9de0c36d99fc311f337f6fe38cab9b.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-y6gq72 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
+                                                                    <img src="_assets/v8/8fbb5e977601ab3c12d564a628017cbb97098776.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-2ljd5r css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img src="_assets/v8/eba29f6e723f7f492d075808d461102dc9226cbd.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
+                                                                    <img src="_assets/v8/a9a813766e41c5901ff6c2b2296fe4c62db70fe7.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-86sg77 css-wc1msa" data-isimage="true">
+                                                        <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                            <img src="_assets/v8/1bad736874d8602af8cfa1cf1a06d1bdc6c6bc4c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
+                                    <div class="css-uaaaod">
+                                        <div class="css-bkqry0 css-7js8wp css-v27th6">
+                                            <div class="css-uaaaod">
+                                                <div class="css-tr5aoa css-7js8wp css-v27th6">
+                                                    <div class="css-hv01ud css-5dba7r">
+                                                        <div class="css-lges1h css-7js8wp css-v27th6">
+                                                            <div class="css-uaaaod">
+                                                                <div class="css-vplhby css-7js8wp css-v27th6">
+                                                                    <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Soluciones</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Condominios y ACs</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Administradores de rentas</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Casos de éxito</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Comparar soluciones</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-hv01ud css-5dba7r">
+                                                        <div class="css-lges1h css-7js8wp css-v27th6">
+                                                            <div class="css-uaaaod">
+                                                                <div class="css-vplhby css-7js8wp css-v27th6">
+                                                                    <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Servicios Financieros</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Depósitos referenciados</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Pagos con tarjeta</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Domiciliación bancaria</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Seguros para inmuebles</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Conciliación automática</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-uaaaod">
+                                                <div class="css-tr5aoa css-7js8wp css-v27th6">
+                                                    <div class="css-hv01ud css-5dba7r">
+                                                        <div class="css-lges1h css-7js8wp css-v27th6">
+                                                            <div class="css-uaaaod">
+                                                                <div class="css-vplhby css-7js8wp css-v27th6">
+                                                                    <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Recursos</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Blog inmobiliario</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Neivor Academy</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Ebooks y guías prácticas</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos y webinars</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Calculadoras y checklists</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-hv01ud css-5dba7r">
+                                                        <div class="css-lges1h css-7js8wp css-v27th6">
+                                                            <div class="css-uaaaod">
+                                                                <div class="css-vplhby css-7js8wp css-v27th6">
+                                                                    <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Empresa</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Nosotros</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Sala de prensa</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Contáctanos</p>
+                                                            </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Trabaja con nosotros</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-5knerd">
+                                        <div class="css-lges1h css-7js8wp">
+                                            <div class="css-5knerd">
+                                                <div class="css-8ul899 css-j9f0op">
+                                                    <div class="css-sutng4 css-7js8wp">
+                                                        <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-5knerd">
+                                                <div class="css-8ul899 css-j9f0op">
+                                                    <div class="css-sutng4 css-7js8wp">
+                                                        <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Terminos y condiciones</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-i5gtd1 css-5knerd">
+                                        <div class="css-fokp20 css-7js8wp css-i5gtd1">
+                                            <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing">2025 Neivor. Todos los derechos reservados</p>
+                                            </div>
+                                            <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing">Oficina Neivor Edificio Ritz Carlton: México: Av. P.º de la Reforma 509-Piso 16, Cuauhtémoc, 06500 Ciudad de México, CDMX</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="css-i5hbuo css-5knerd">
-                      <div class="css-a3m5wj css-7js8wp css-i5hbuo">
-                                        <?php if($social_networks): ?>
-                    <div class="social-networks">
-                        <?php foreach($social_networks as $item): ?>
-
-                        <div class="css-2ljd5r css-5knerd">
-                          <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
-                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img
-                                  src="_assets/v8/b7a6ebae1fb7d56a0df63e5409586f716c181f72.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)"><img
-                                  src="_assets/v8/3b7389ea8fd5f8c5accce62d0723c5accbc49fab.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                          </div>
-                        </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <?php endif; ?>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="css-uaaaod">
-                  <div class="css-bkqry0 css-7js8wp css-v27th6">
-                    <div class="css-uaaaod">
-                      <div class="css-tr5aoa css-7js8wp css-v27th6">
-                        <div class="css-hv01ud css-5dba7r">
-                          <div class="css-lges1h css-7js8wp css-v27th6">
-                            <div class="css-uaaaod">
-                              <div class="css-vplhby css-7js8wp css-v27th6">
-                                <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link"
-                                  tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                  <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Soluciones</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Condominios y ACs</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Administradores de rentas</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Casos de éxito</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Comparar soluciones</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-hv01ud css-5dba7r">
-                          <div class="css-lges1h css-7js8wp css-v27th6">
-                            <div class="css-uaaaod">
-                              <div class="css-vplhby css-7js8wp css-v27th6">
-                                <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link"
-                                  tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                  <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Servicios Financieros
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Depósitos referenciados</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Pagos con tarjeta</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Domiciliación bancaria</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Seguros para inmuebles</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Conciliación automática</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="css-uaaaod">
-                      <div class="css-tr5aoa css-7js8wp css-v27th6">
-                        <div class="css-hv01ud css-5dba7r">
-                          <div class="css-lges1h css-7js8wp css-v27th6">
-                            <div class="css-uaaaod">
-                              <div class="css-vplhby css-7js8wp css-v27th6">
-                                <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link"
-                                  tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                  <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Recursos</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Blog inmobiliario</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Neivor Academy</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Ebooks y guías prácticas</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos y webinars</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Calculadoras y checklists</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-hv01ud css-5dba7r">
-                          <div class="css-lges1h css-7js8wp css-v27th6">
-                            <div class="css-uaaaod">
-                              <div class="css-vplhby css-7js8wp css-v27th6">
-                                <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link"
-                                  tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                  <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Empresa</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Nosotros</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Sala de prensa</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Contáctanos</p>
-                            </div>
-                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Trabaja con nosotros</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="css-5knerd">
-                  <div class="css-lges1h css-7js8wp">
-                    <div class="css-5knerd">
-                      <div class="css-8ul899 css-j9f0op">
-                        <div class="css-sutng4 css-7js8wp">
-                          <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0"
-                            data-paragraph-spacing="0px" data-list-spacing="0px">
-                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="css-5knerd">
-                      <div class="css-8ul899 css-j9f0op">
-                        <div class="css-sutng4 css-7js8wp">
-                          <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0"
-                            data-paragraph-spacing="0px" data-list-spacing="0px">
-                            <div class="nav-policies">
-                                <?php wp_nav_menu(['menu'=>'Footer']); ?>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="css-i5gtd1 css-5knerd">
-                  <div class="css-fokp20 css-7js8wp css-i5gtd1">
-                    <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0"
-                      data-paragraph-spacing="0px" data-list-spacing="0px">
-                      <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>
-                    </div>
-                    <div class="textContents css-wc1msa css-59rdls css-qpvddb css-3hwh7f" role="link" tabindex="0"
-                      data-paragraph-spacing="0px" data-list-spacing="0px">
-                      <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div data-page-overflowx="hidden" data-breakpoint-id="node-0_4" data-breakpoint="true" data-width="1280"
-      data-height="1080" class="css-ld0hsi css-j6ldtg css-8vmj48">
-      <div class="css-g1qjki css-trglf0 css-vd6a0u">
-        <div class="css-rt1aze css-j9f0op">
-          <div class="css-sa9thz css-7js8wp css-j9f0op">
-            <div class="css-l1xxg7 css-5dba7r">
-              <div class="css-4sgc css-7js8wp css-j9f0op">
-                <div class="css-uaaaod">
-                  <div class="css-m4mih0 css-7js8wp css-v27th6">
-                    <div class="css-5knerd">
-                      <div class="css-x7q7ad css-7js8wp">
-                        <div class="css-5knerd">
-                          <div class="css-kujjrk css-7js8wp">
-                            <div class="css-5knerd">
-                              <div class="css-rt1aze css-j9f0op">
-                                <div class="css-vfwpqw css-7js8wp">
-                                  <div class="css-opu8dy css-wc1msa" data-isimage="true">
-                                    <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                        src="_assets/v8/5ab3b09ec8eb0716c224260b66801b8ade19a43d.svg" alt=""
-                                        class="css-9j6u1t css-8zr56v" /></div>
-                                  </div>
+            <div data-page-overflowx="hidden" data-breakpoint-id="node-0_4" data-breakpoint="true" data-width="1280" data-height="1080" class="css-ld0hsi css-j6ldtg css-8vmj48">
+                <div class="css-g1qjki css-trglf0 css-vd6a0u">
+                    <div class="css-rt1aze css-j9f0op">
+                        <div class="css-sa9thz css-7js8wp css-j9f0op">
+                            <div class="css-l1xxg7 css-5dba7r">
+                                <div class="css-4sgc css-7js8wp css-j9f0op">
+                                    <div class="css-uaaaod">
+                                        <div class="css-m4mih0 css-7js8wp css-v27th6">
+                                            <div class="css-5knerd">
+                                                <div class="css-x7q7ad css-7js8wp">
+                                                    <div class="css-5knerd">
+                                                        <div class="css-kujjrk css-7js8wp">
+                                                            <div class="css-5knerd">
+                                                                <div class="css-rt1aze css-j9f0op">
+                                                                    <div class="css-vfwpqw css-7js8wp">
+                                                                        <div class="css-opu8dy css-wc1msa" data-isimage="true">
+                                                                            <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                                <img loading="lazy" src="_assets/v8/5ab3b09ec8eb0716c224260b66801b8ade19a43d.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-5knerd">
+                                                <div class="css-d034xb css-7js8wp">
+                                                    <div class="css-b0oug5 css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/6971c58aa70bbc1e51af2b9cf3e16bc578a553aa.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/41e15fdc7c647e98f9f7f8208fb948ab85ac1318.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-b0oug5 css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/d761b8bf07b7891235568b219fb2ba14af3c68f7.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-7ckcc6 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/01c57772de035cece8b9b543fbf461beb14702e9.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-b0oug5 css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/ad191b6f5930d90fa83be08364f6b1c4c21ec1b8.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-y6gq72 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/d396d3e50af1c212e10f8416bfeb0b80350745d9.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-b0oug5 css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
+                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/d5f554694222ebd4e6b7c3a88ea648fe81f53fe8.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
+                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                                    <img loading="lazy" src="_assets/v8/74ac514f3cb535b637244882fa673b3ce988511c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-qnxlx7 css-wc1msa" data-isimage="true">
+                                                        <div class="css-roiesn css-wixxpz css-gs60ek">
+                                                            <img loading="lazy" src="_assets/v8/766b2fe35a413ccd790e3544bf1fa2be5893c83b.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-uaaaod">
+                                        <div class="css-m4mih0 css-7js8wp css-v27th6">
+                                            <div class="css-hv01ud css-5dba7r">
+                                                <div class="css-j0or7i css-7js8wp css-v27th6">
+                                                    <div class="css-uaaaod">
+                                                        <div class="css-vplhby css-7js8wp css-v27th6">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Soluciones</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Condominios y ACs</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Administradores de rentas</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Casos de éxito</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Comparar soluciones</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-hv01ud css-5dba7r">
+                                                <div class="css-j0or7i css-7js8wp css-v27th6">
+                                                    <div class="css-uaaaod">
+                                                        <div class="css-vplhby css-7js8wp css-v27th6">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Servicios Financieros</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Depósitos referenciados</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Pagos con tarjeta</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Domiciliación bancaria</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Seguros para inmuebles</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Conciliación automática</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-hv01ud css-5dba7r">
+                                                <div class="css-j0or7i css-7js8wp css-v27th6">
+                                                    <div class="css-uaaaod">
+                                                        <div class="css-vplhby css-7js8wp css-v27th6">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Recursos</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Blog inmobiliario</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Neivor Academy</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Ebooks y guías prácticas</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Eventos y webinars</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Calculadoras y checklists</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-hv01ud css-5dba7r">
+                                                <div class="css-j0or7i css-7js8wp css-v27th6">
+                                                    <div class="css-uaaaod">
+                                                        <div class="css-vplhby css-7js8wp css-v27th6">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Empresa</p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Nosotros</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Sala de prensa</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Eventos</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Contáctanos</p>
+                                                    </div>
+                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Trabaja con nosotros</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-i5gp16 css-5knerd">
+                                        <div class="css-islyrh css-7js8wp css-i5gp16">
+                                            <div class="css-5knerd">
+                                                <div class="css-8ul899 css-j9f0op">
+                                                    <div class="css-sutng4 css-7js8wp">
+                                                        <a class="textContents css-vkpzlc css-u0y8se css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <p class="css-8zr56v css-42csuh css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="css-5knerd">
+                                                <div class="css-8ul899 css-j9f0op">
+                                                    <div class="css-sutng4 css-7js8wp">
+                                                        <a class="textContents css-vkpzlc css-u0y8se css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <p class="css-8zr56v css-42csuh css-6jeswk  adjustLetterSpacing">Terminos y condiciones</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-uaaaod">
+                                        <div class="css-m4mih0 css-7js8wp css-v27th6">
+                                            <a class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                <p class="css-8zr56v css-owgos1 css-gpop2m  adjustLetterSpacing">Oficina Neivor Edificio Ritz Carlton: México: Av. P.º de la Reforma 509-Piso 16, Cuauhtémoc, 06500 Ciudad de México, CDMX</p>
+                                            </a>
+                                            <a class="textContents css-wc1msa css-3pu501 css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing">2025 Neivor. Todos los derechos reservados</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="css-5knerd">
-                      <div class="css-d034xb css-7js8wp">
-                        <div class="css-b0oug5 css-5knerd">
-                          <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/6971c58aa70bbc1e51af2b9cf3e16bc578a553aa.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/41e15fdc7c647e98f9f7f8208fb948ab85ac1318.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-b0oug5 css-5knerd">
-                          <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/d761b8bf07b7891235568b219fb2ba14af3c68f7.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                            <div class="css-7ckcc6 css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/01c57772de035cece8b9b543fbf461beb14702e9.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-b0oug5 css-5knerd">
-                          <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/ad191b6f5930d90fa83be08364f6b1c4c21ec1b8.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                            <div class="css-y6gq72 css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/d396d3e50af1c212e10f8416bfeb0b80350745d9.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-b0oug5 css-5knerd">
-                          <div class="css-8kkpf5 css-gs60ek css-b0oug5">
-                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/d5f554694222ebd4e6b7c3a88ea648fe81f53fe8.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                              <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                                  src="_assets/v8/74ac514f3cb535b637244882fa673b3ce988511c.svg" alt=""
-                                  class="css-9j6u1t css-8zr56v" /></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="css-qnxlx7 css-wc1msa" data-isimage="true">
-                          <div class="css-roiesn css-wixxpz css-gs60ek"><img loading="lazy"
-                              src="_assets/v8/766b2fe35a413ccd790e3544bf1fa2be5893c83b.svg" alt=""
-                              class="css-9j6u1t css-8zr56v" /></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="css-uaaaod">
-                  <div class="css-m4mih0 css-7js8wp css-v27th6">
-                    <div class="css-hv01ud css-5dba7r">
-                      <div class="css-j0or7i css-7js8wp css-v27th6">
-                        <div class="css-uaaaod">
-                          <div class="css-vplhby css-7js8wp css-v27th6"><a
-                              class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9"
-                              href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Soluciones</p>
-                            </a></div>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Condominios y ACs</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Administradores de rentas</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Casos de éxito</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Comparar soluciones</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="css-hv01ud css-5dba7r">
-                      <div class="css-j0or7i css-7js8wp css-v27th6">
-                        <div class="css-uaaaod">
-                          <div class="css-vplhby css-7js8wp css-v27th6"><a
-                              class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9"
-                              href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Servicios Financieros</p>
-                            </a></div>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Depósitos referenciados</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Pagos con tarjeta</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Domiciliación bancaria</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Seguros para inmuebles</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Conciliación automática</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="css-hv01ud css-5dba7r">
-                      <div class="css-j0or7i css-7js8wp css-v27th6">
-                        <div class="css-uaaaod">
-                          <div class="css-vplhby css-7js8wp css-v27th6"><a
-                              class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9"
-                              href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Recursos</p>
-                            </a></div>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Blog inmobiliario</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Neivor Academy</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Ebooks y guías prácticas</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Eventos y webinars</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Calculadoras y checklists</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="css-hv01ud css-5dba7r">
-                      <div class="css-j0or7i css-7js8wp css-v27th6">
-                        <div class="css-uaaaod">
-                          <div class="css-vplhby css-7js8wp css-v27th6"><a
-                              class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9"
-                              href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                              data-paragraph-spacing="0px" data-list-spacing="0px">
-                              <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Empresa</p>
-                            </a></div>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Nosotros</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Sala de prensa</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Eventos</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Contáctanos</p>
-                        </div>
-                        <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px"
-                          data-list-spacing="0px">
-                          <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Trabaja con nosotros</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="css-i5gp16 css-5knerd">
-                  <div class="css-islyrh css-7js8wp css-i5gp16">
-                    <div class="css-5knerd">
-                      <div class="css-8ul899 css-j9f0op">
-                        <div class="css-sutng4 css-7js8wp"><a class="textContents css-vkpzlc css-u0y8se css-qc1st9"
-                            href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                            data-paragraph-spacing="0px" data-list-spacing="0px">
-                            <p class="css-8zr56v css-42csuh css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
-                          </a></div>
-                      </div>
-                    </div>
-                    <div class="css-5knerd">
-                      <div class="css-8ul899 css-j9f0op">
-                        <div class="nav-policies">
-                            <?php wp_nav_menu(['menu'=>'Footer']); ?>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="css-uaaaod">
-                  <div class="css-m4mih0 css-7js8wp css-v27th6"><a
-                      class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f"
-                      href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                      data-paragraph-spacing="0px" data-list-spacing="0px">
-                      <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>
-                    </a><a class="textContents css-wc1msa css-3pu501 css-3hwh7f"
-                      href="https://neivor.com/software-administracion-alquileres/" target="_blank"
-                      data-paragraph-spacing="0px" data-list-spacing="0px">
-                      <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field('address', 'option'); ?></p>
-                    </a></div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-</section>
