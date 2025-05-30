@@ -26,10 +26,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @layer figreset {
-                :root {
-                    font-family: var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji")
-                }
-
+      
                 *,*:before,*:after {
                     box-sizing: border-box
                 }
@@ -215,14 +212,14 @@ $social_networks = get_field("social_networks", "options");
         </style>
         <style id="font-faces-1pb4q7">
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2.woff2");
                 font-display: block
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-english.woff2");
                 font-display: block;
@@ -230,7 +227,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest-latin.woff2");
                 font-display: block;
@@ -238,7 +235,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-a.woff2");
                 font-display: block;
@@ -246,7 +243,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-b.woff2");
                 font-display: block;
@@ -254,7 +251,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-additional.woff2");
                 font-display: block;
@@ -262,7 +259,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:SemiBold";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest.woff2");
                 font-display: block;
@@ -270,14 +267,14 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2.woff2");
                 font-display: block
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-english.woff2");
                 font-display: block;
@@ -285,7 +282,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest-latin.woff2");
                 font-display: block;
@@ -293,7 +290,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-a.woff2");
                 font-display: block;
@@ -301,7 +298,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-b.woff2");
                 font-display: block;
@@ -309,7 +306,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-latin-extended-additional.woff2");
                 font-display: block;
@@ -317,7 +314,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             @font-face {
-                font-family: "Urbanist:Regular";
+                
                 font-style: normal;
                 src: url("_woff/v1/Urbanist_wght__2/Urbanist_wght__2-rest.woff2");
                 font-display: block;
@@ -674,7 +671,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             #container .css-9wg4zi {
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 font-size: 0px;
@@ -696,7 +693,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre-wrap;
                 line-height: 1.5;
                 font-size: 15px;
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 letter-spacing: 0.10000000149011612px;
@@ -713,7 +710,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             #container .css-1x9ayl {
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 font-size: 13px;
@@ -767,7 +764,7 @@ $social_networks = get_field("social_networks", "options");
 
             #container .css-u0y8se {
                 white-space: nowrap;
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 font-size: 0px;
@@ -780,7 +777,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre;
                 line-height: 1.5;
                 font-size: 13px;
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 letter-spacing: 0.10000000149011612px;
@@ -809,7 +806,7 @@ $social_networks = get_field("social_networks", "options");
             }
 
             #container .css-qpvddb {
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 font-size: 0px;
@@ -823,7 +820,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre-wrap;
                 line-height: 1.5;
                 font-size: 13px;
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 letter-spacing: 0.10000000149011612px;
@@ -961,7 +958,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre-wrap;
                 line-height: 1.5;
                 font-size: 15px;
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 letter-spacing: 0.10000000149011612px;
@@ -969,7 +966,7 @@ $social_networks = get_field("social_networks", "options");
 
             #container .css-dnsydh {
                 white-space: nowrap;
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 font-size: 15px;
@@ -1003,7 +1000,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre;
                 line-height: 1.5;
                 font-size: 15px;
-                font-family: "Urbanist:SemiBold", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 600;
                 letter-spacing: 0.10000000149011612px;
@@ -1017,7 +1014,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre-wrap;
                 line-height: 1.5;
                 font-size: 15px;
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 letter-spacing: 0.10000000149011612px;
@@ -1025,7 +1022,7 @@ $social_networks = get_field("social_networks", "options");
 
             #container .css-3pu501 {
                 white-space: nowrap;
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 font-size: 0px;
@@ -1039,7 +1036,7 @@ $social_networks = get_field("social_networks", "options");
                 white-space: pre;
                 line-height: 1.5;
                 font-size: 15px;
-                font-family: "Urbanist:Regular", sans-serif;
+                
                 word-break: break-word;
                 font-weight: 400;
                 letter-spacing: 0.10000000149011612px;
@@ -1075,67 +1072,29 @@ $social_networks = get_field("social_networks", "options");
                                             </div>
                                             <div class="css-i5hbuo css-5knerd">
                                                 <div class="css-a3m5wj css-7js8wp css-i5hbuo">
-                                                    <div class="css-2ljd5r css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
+                                            <div class="css-d034xb css-7js8wp">
+                                                  <?php if (
+                                                      $social_networks
+                                                  ): ?>
+                                                  <?php foreach ($social_networks as $item): ?>
+                                                    <div class="css-b0oug5 css-5knerd">
+                                                        <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img src="_assets/v8/b7a6ebae1fb7d56a0df63e5409586f716c181f72.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
-                                                                    <img src="_assets/v8/3b7389ea8fd5f8c5accce62d0723c5accbc49fab.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-2ljd5r css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img src="_assets/v8/bd8af619a23ade279eca81536415a896fd42a807.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-7ckcc6 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
-                                                                    <img src="_assets/v8/8a26d67f677df51fe6079f251efc79f30d0cd837.svg" alt="" class="css-9j6u1t css-8zr56v"/>
+                                                                  <a href="<?= $item[
+                                                                      "url"
+                                                                  ] ?>" target="_blank">
+                                                                    <?= $item[
+                                                                        "fontawesome_icon"
+                                                                    ] ?>
+                                                                  </a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="css-2ljd5r css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img src="_assets/v8/87b6e778de9de0c36d99fc311f337f6fe38cab9b.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-y6gq72 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
-                                                                    <img src="_assets/v8/8fbb5e977601ab3c12d564a628017cbb97098776.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-2ljd5r css-5knerd">
-                                                        <div class="css-8kkpf5 css-gs60ek css-2ljd5r">
-                                                            <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                    <img src="_assets/v8/eba29f6e723f7f492d075808d461102dc9226cbd.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek" style="--fill-0:rgba(255, 255, 255, 1)">
-                                                                    <img src="_assets/v8/a9a813766e41c5901ff6c2b2296fe4c62db70fe7.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="css-86sg77 css-wc1msa" data-isimage="true">
-                                                        <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                            <img src="_assets/v8/1bad736874d8602af8cfa1cf1a06d1bdc6c6bc4c.svg" alt="" class="css-9j6u1t css-8zr56v"/>
-                                                        </div>
-                                                    </div>
+                                                    <?php endforeach; ?>
+                                                  <?php endif; ?>
+                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1317,13 +1276,7 @@ $social_networks = get_field("social_networks", "options");
                                                                     <div class="css-vfwpqw css-7js8wp">
                                                                         <div class="css-opu8dy css-wc1msa" data-isimage="true">
                                                                             <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                                <img src="<?= esc_url(
-                                                                                    wp_get_attachment_url(
-                                                                                        get_theme_mod(
-                                                                                            "custom_logo"
-                                                                                        )
-                                                                                    )
-                                                                                ) ?>" alt="Neivor logo" class="logo-footer">
+                                                                                <img src="https://cdn.neivor.com/cdn/mexico/static/neivor-rent/logo/neivor-rent-logo.svg" alt="Neivor logo" class="logo-footer">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1342,17 +1295,6 @@ $social_networks = get_field("social_networks", "options");
                                                     <div class="css-b0oug5 css-5knerd">
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
-                                                                <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                  <a href="<?= $item[
-                                                                      "url"
-                                                                  ] ?>" target="_blank">
-                                                                    <?= $item[
-                                                                        "fontawesome_icon"
-                                                                    ] ?>
-                                                                  </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="css-1ogtb2 css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
                                                                   <a href="<?= $item[
                                                                       "url"
