@@ -1263,7 +1263,7 @@ $social_networks = get_field("social_networks", "options");
                             <div class="css-l1xxg7 css-5dba7r">
                                 <div class="css-4sgc css-7js8wp css-j9f0op">
                                     <div class="css-uaaaod">
-                                        <div class="css-m4mih0 css-7js8wp css-v27th6">
+                                        <div class="css-m4mih0 css-7js8wp css-v27th6" style="padding:40px">
                                             <div class="css-5knerd">
                                                 <div class="css-x7q7ad css-7js8wp">
                                                     <div class="css-5knerd">
@@ -1293,7 +1293,7 @@ $social_networks = get_field("social_networks", "options");
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                  <a href="<?= $item[
+                                                                  <a style="color:#6f42c1" href="<?= $item[
                                                                       "url"
                                                                   ] ?>" target="_blank">
                                                                     <?= $item[
