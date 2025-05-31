@@ -1078,7 +1078,7 @@ $social_networks = get_field("social_networks", "options");
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
                                                                 <div class="css-roiesn css-wixxpz css-gs60ek">
-                                                                  <a href="<?= $item[
+                                                                  <a style="color:#6f42c1" href="<?= $item[
                                                                       "url"
                                                                   ] ?>" target="_blank">
                                                                     <?= $item[
