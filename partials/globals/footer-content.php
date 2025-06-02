@@ -378,7 +378,6 @@ $social_networks = get_field("social_networks", "options");
             }
 
             #container .css-j6ldtg {
-                min-width: var(--content-min-width);
                 width: 100%;
                 height: var(--content-min-height);
             }
@@ -387,7 +386,7 @@ $social_networks = get_field("social_networks", "options");
                 --content-width: calc(var(--content-width-scaled, 100%) - (var(--content-margin-x-scaled, 0px) * 2));
                 --content-margin: 0 var(--content-margin-x-scaled, 0);
                 --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 375px) - (var(--content-margin-x-scaled, 0px) * 2));
-                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 1080px);
+                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 58rem);
                 overflow: clip;
                 background-color: #FFF;
             }
@@ -833,7 +832,7 @@ $social_networks = get_field("social_networks", "options");
                 --content-width: calc(var(--content-width-scaled, 100%) - (var(--content-margin-x-scaled, 0px) * 2));
                 --content-margin: 0 var(--content-margin-x-scaled, 0);
                 --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 1280px) - (var(--content-margin-x-scaled, 0px) * 2));
-                --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)));
+                --content-min-height: 34rem;
                 overflow: clip;
                 background-color: #f5f8fa;
             }
@@ -845,7 +844,6 @@ $social_networks = get_field("social_networks", "options");
                 align-items: flex-start;
                 gap: 90px;
                 position: relative;
-                padding: 32px 150px;
             }
 
             #container .css-l1xxg7 {
@@ -1044,7 +1042,7 @@ $social_networks = get_field("social_networks", "options");
                 <div class="css-16wy77 css-trglf0 css-vd6a0u">
                     <div class="css-rt1aze css-j9f0op">
                         <div class="css-x92lyl css-7js8wp css-v27th6">
-                            <div class="css-uaaaod" style="margin-top :2rem">
+                            <div class="css-uaaaod">
                                 <div class="css-bpd33r css-7js8wp css-v27th6">
                                     <div class="css-uaaaod">
                                         <div class="css-ck97wh css-7js8wp css-v27th6">
@@ -1263,7 +1261,7 @@ $social_networks = get_field("social_networks", "options");
                             <div class="css-l1xxg7 css-5dba7r">
                                 <div class="css-4sgc css-7js8wp css-j9f0op">
                                     <div class="css-uaaaod">
-                                        <div class="css-m4mih0 css-7js8wp css-v27th6" style="padding:40px">
+                                        <div class="css-m4mih0 css-7js8wp css-v27th6" style="padding:40px 0px">
                                             <div class="css-5knerd">
                                                 <div class="css-x7q7ad css-7js8wp">
                                                     <div class="css-5knerd">
