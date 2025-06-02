@@ -389,7 +389,6 @@ $social_networks = get_field("social_networks", "options");
                 --content-min-width: calc(max(var(--viewport-width-scaled, 100%), 375px) - (var(--content-margin-x-scaled, 0px) * 2));
                 --content-min-height: max(var(--viewport-height-scaled, var(--100dvh)), 58rem);
                 overflow: clip;
-                background-color: #FFF;
             }
 
             #container .css-16wy77 {
@@ -426,7 +425,6 @@ $social_networks = get_field("social_networks", "options");
                 align-items: flex-start;
                 gap: 90px;
                 position: relative;
-                padding: 50px 24px;
             }
 
             #container .css-7js8wp {
@@ -843,7 +841,7 @@ $social_networks = get_field("social_networks", "options");
             
             #container .css-8vmj48 {
                 --content-margin: 0 var(--content-margin-x-scaled, 0);
-                --content-min-height: 34rem;
+                --content-min-height: 47rem;
                 overflow: clip;
                 background-color: #f5f8fa;
             }
@@ -1049,7 +1047,10 @@ $social_networks = get_field("social_networks", "options");
             }
             .css-vd6a0u  {
                 width: 100% !important;
-            }  
+            }
+            a:hover {
+                color: #6150bd;
+            }
         </style>
         <div id="container" class="container">
             <div data-page-overflowx="hidden" data-breakpoint-id="node-0_6" data-breakpoint="true" data-width="375" data-height="1080" class="css-ld0hsi css-j6ldtg css-ys9dmc">
@@ -1085,7 +1086,10 @@ $social_networks = get_field("social_networks", "options");
                                                   <?php if (
                                                       $social_networks
                                                   ): ?>
-                                                  <?php foreach ($social_networks as $item): ?>
+                                                  <?php foreach (
+                                                      $social_networks
+                                                      as $item
+                                                  ): ?>
                                                     <div class="css-b0oug5 css-5knerd">
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
@@ -1180,20 +1184,40 @@ $social_networks = get_field("social_networks", "options");
                                                                 </div>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Depósitos referenciados</p>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicos-financieros-depositos-referenciados/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Depósito referenciado</p>
+                                                                </a>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Pagos con tarjeta</p>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-domiciliacion/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Domiciliacion</p>
+                                                                </a>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Domiciliación bancaria</p>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-cobranza-con-tarjeta-de-debito-y-credito/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Pagos T. débito y crédito</p>
+                                                                </a>
+                                                            </div>
+                                                               <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-terminal-virtual/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Terminal Virtual y liga de pagos</p>
+                                                                </a>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Seguros para inmuebles</p>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-cobranza-100/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Cobranza al 100%</p>
+                                                                </a>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Conciliación automática</p>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-gnp-hogar/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Seguros de áreas comunes</p>
+                                                                </a>
                                                             </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-gnp-mi-condominio/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Seguros hogar</p>
+                                                                </a>
+                                                            </div>   
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1210,20 +1234,20 @@ $social_networks = get_field("social_networks", "options");
                                                                 </div>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Blog inmobiliario</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" target="_blank" href="https://blog.neivor.com/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Blog</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Neivor Academy</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/neivor-radar-condominal/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Evalua tu condominio</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Ebooks y guías prácticas</p>
-                                                            </div>
-                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos y webinars</p>
-                                                            </div>
-                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Calculadoras y checklists</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/plantilla-checklist-mantenimiento-edificios/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Checklist mantenimiento</p>
+                                                                </a>
+                                                            </div> 
                                                         </div>
                                                     </div>
                                                     <div class="css-hv01ud css-5dba7r">
@@ -1236,20 +1260,30 @@ $social_networks = get_field("social_networks", "options");
                                                                 </div>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Nosotros</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" target="_blank" href="https://www.neivor.com/historias-de-exito/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Historias de Éxito</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Sala de prensa</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/sala-de-prensa/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Sala de prensa</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Eventos</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/sobre-nosotros-2/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Sobre Nosotros</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Contáctanos</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/distrito-neivor/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Distrito Neivor 2025</p>
+                                                                </a>
+                                                            </div> 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Trabaja con nosotros</p>
-                                                            </div>
+                                                                <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/agenda-una-demo-asesoria/">
+                                                                    <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Contáctanos</p>
+                                                                </a>
+                                                            </div> 
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1332,7 +1366,10 @@ $social_networks = get_field("social_networks", "options");
                                                   <?php if (
                                                       $social_networks
                                                   ): ?>
-                                                  <?php foreach ($social_networks as $item): ?>
+                                                  <?php foreach (
+                                                      $social_networks
+                                                      as $item
+                                                  ): ?>
                                                     <div class="css-b0oug5 css-5knerd">
                                                         <div class="css-8kkpf5 css-gs60ek css-b0oug5">
                                                             <div class="css-ardmi css-roiesn" data-isimage="true">
@@ -1411,26 +1448,47 @@ $social_networks = get_field("social_networks", "options");
                                                 <div class="css-j0or7i css-7js8wp css-v27th6">
                                                     <div class="css-uaaaod">
                                                         <div class="css-vplhby css-7js8wp css-v27th6">
-                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-hnt0es css-6jeswk  adjustLetterSpacing">Servicios Financieros</p>
                                                             </a>
                                                         </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicos-financieros-depositos-referenciados/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Depósito referenciado</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-domiciliacion/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Domiciliacion</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-cobranza-con-tarjeta-de-debito-y-credito/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Pagos T. débito y crédito</p>
+                                                            </a>
+                                                        </div>
+                                                            <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-terminal-virtual/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Terminal Virtual y liga de pagos</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-cobranza-100/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Cobranza al 100%</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-gnp-hogar/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Seguros de áreas comunes</p>
+                                                            </a>
+                                                        </div>
+                                                        <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                            <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/servicios-financieros-gnp-mi-condominio/">
+                                                                <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Seguros hogar</p>
+                                                            </a>
+                                                        </div>  
                                                     </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Depósitos referenciados</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Pagos con tarjeta</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Domiciliación bancaria</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Seguros para inmuebles</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Conciliación automática</p>
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="css-hv01ud css-5dba7r">
@@ -1442,21 +1500,21 @@ $social_networks = get_field("social_networks", "options");
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Blog inmobiliario</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Neivor Academy</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Ebooks y guías prácticas</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Eventos y webinars</p>
-                                                    </div>
-                                                    <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Calculadoras y checklists</p>
-                                                    </div>
+                                                    <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <a class="textContents css-myl2ny css-5dba7r css-color-gray" target="_blank" href="https://blog.neivor.com/">
+                                                            <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Blog</p>
+                                                        </a>
+                                                    </div> 
+                                                    <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/neivor-radar-condominal/">
+                                                            <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Evalua tu condominio</p>
+                                                        </a>
+                                                    </div> 
+                                                    <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                                        <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/plantilla-checklist-mantenimiento-edificios/">
+                                                            <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">Checklist mantenimiento</p>
+                                                        </a>
+                                                    </div> 
                                                 </div>
                                             </div>
                                             <div class="css-hv01ud css-5dba7r">
