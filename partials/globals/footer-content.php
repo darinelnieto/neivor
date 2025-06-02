@@ -1116,19 +1116,29 @@ $social_networks = get_field("social_networks", "options");
                                                                 </div>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Condominios y ACs</p>
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">
+                                                                    <a href="https://www.neivor.com/administradores-web/">Administradores / Comité</a>
+                                                                </p>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Administradores de rentas</p>
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">
+                                                                    <a href="https://www.neivor.com/mercados-condo-desarrolladores/">Desarrolladores</a>
+                                                                </p>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">
+                                                                    <a href="https://www.neivor.com/mercados-retail/">Preventas y Enganches</a>
+                                                                </p>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Casos de éxito</p>
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">
+                                                                     <a href="https://www.neivor.com/mercados-rentas-residenciales/">Residenciales</a>
+                                                                </p>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">Comparar soluciones</p>
+                                                                <p class="css-8zr56v css-ydwgaq  adjustLetterSpacing">
+                                                                    <a href="https://www.neivor.com/mercados-rentas-residenciales/"> Oficinas, bodegas y locales</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1328,19 +1338,29 @@ $social_networks = get_field("social_networks", "options");
                                                         </div>
                                                     </div>
                                                     <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Condominios y ACs</p>
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">
+                                                            <a href="https://www.neivor.com/administradores-web/">Administradores / Comité</a>
+                                                        </p>
                                                     </div>
                                                     <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Administradores de rentas</p>
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">
+                                                            <a href="https://www.neivor.com/mercados-condo-desarrolladores/">Desarrolladores</a>
+                                                        </p>
                                                     </div>
                                                     <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Desarrolladores inmobiliarios</p>
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">
+                                                            <a href="https://www.neivor.com/mercados-retail/">Preventas y Enganches</a>
+                                                        </p>
                                                     </div>
                                                     <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Casos de éxito</p>
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">
+                                                            <a href="https://www.neivor.com/mercados-rentas-residenciales/">Residenciales</a>
+                                                        </p>
                                                     </div>
                                                     <div class="textContents css-wc1msa css-dnsydh css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">Comparar soluciones</p>
+                                                        <p class="css-8zr56v css-evv1mn  adjustLetterSpacing">
+                                                            <a href="https://www.neivor.com/mercados-rentas-residenciales/">Oficinas, bodegas y locales</a>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
