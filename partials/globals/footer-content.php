@@ -1574,13 +1574,13 @@ $social_networks = get_field("social_networks", "options");
                                     </div>
                                     <div class="css-uaaaod">
                                         <div class="css-m4mih0 css-7js8wp css-v27th6">
-                                            <a class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                            <a class="textContents css-i5eubj css-wc1msa css-qpvddb css-3hwh7f" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                 <p class="css-8zr56v css-mzqxot css-gpop2m  adjustLetterSpacing"><?= get_field(
                                                     "address",
                                                     "option"
                                                 ) ?></p>                                         
                                             </a>
-                                            <a class="textContents css-wc1msa css-3pu501 css-3hwh7f" href="https://neivor.com/software-administracion-alquileres/" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
+                                            <a class="textContents css-wc1msa css-3pu501 css-3hwh7f" target="_blank" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                 <p class="css-8zr56v css-ebyb8 css-gpop2m  adjustLetterSpacing"><?= get_field(
                                                     "copyright",
                                                     "option"
