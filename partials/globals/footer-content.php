@@ -685,6 +685,15 @@ $social_networks = get_field("social_networks", "options");
                 --list-spacing: 0px;
                 --letter-spacing: 0.10000000149011612px;
             }
+            
+            .css-color-gray {
+                font-variation-settings: normal;
+                color: #5D5C62;
+                text-decoration : none;
+                --paragraph-spacing: 0px;
+                --list-spacing: 0px;
+                --letter-spacing: 0.10000000149011612px;
+            }
 
             #container .css-ar07fa {
                 white-space: pre-wrap;
@@ -1108,55 +1117,58 @@ $social_networks = get_field("social_networks", "options");
                                                             <div class="css-uaaaod">
                                                                 <div class="css-vplhby css-7js8wp css-v27th6">
                                                                     <div class="textContents css-myl2ny css-5dba7r css-9wg4zi css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb  adjustLetterSpacing">Soluciones</p>
+                                                                        <p class="css-8zr56v css-ar07fa css-g9n9cb adjustLetterSpacing">Soluciones</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/administradores-web/">Administradores / Comité</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/administradores-web/">Administradores / Comité</a>
                                                                 </p>
                                                             </div>
 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-condo-desarrolladores/">Desarrolladores</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-condo-desarrolladores/">Desarrolladores</a>
                                                                 </p>
                                                             </div>
 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-retail/">Preventas y Enganches</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-retail/">Preventas y Enganches</a>
                                                                 </p>
                                                             </div>
 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-rentas-residenciales/">Residenciales</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-rentas-residenciales/">Residenciales</a>
                                                                 </p>
                                                             </div>
 
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-rentas-oficinas-bodegas-y-lotes/">Oficinas, bodegas y locales</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-rentas-oficinas-bodegas-y-lotes/">Oficinas, bodegas y locales</a>
                                                                 </p>
                                                             </div>
-                                                            
+
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-rentas-mixtas/">Mixtas</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-rentas-mixtas/">Mixtas</a>
                                                                 </p>
                                                             </div>
+
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/mercados-rentas-multifamily/">Multifamily</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/mercados-rentas-multifamily/">Multifamily</a>
                                                                 </p>
                                                             </div>
+
                                                             <div class="textContents css-wc1msa css-59rdls css-1x9ayl css-3hwh7f" data-paragraph-spacing="0px" data-list-spacing="0px">
                                                                 <p class="css-8zr56v css-ydwgaq adjustLetterSpacing">
-                                                                    <a class="textContents css-myl2ny css-5dba7r css-qc1st9" href="https://www.neivor.com/historias-de-exito/">Casos de éxito con Neivor</a>
+                                                                    <a class="textContents css-myl2ny css-5dba7r css-color-gray" href="https://www.neivor.com/historias-de-exito/">Casos de éxito con Neivor</a>
                                                                 </p>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="css-hv01ud css-5dba7r">
