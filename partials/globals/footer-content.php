@@ -1296,7 +1296,9 @@ $social_networks = get_field("social_networks", "options");
                                                 <div class="css-8ul899 css-j9f0op">
                                                     <div class="css-sutng4 css-7js8wp">
                                                         <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Política de privacidad</p>
+                                                            <a href="https://cdn.neivor.com/cdn/mexico/static/docs/terminos_y_condiciones_politica_de_privacidad.pdf">
+                                                                <p class="css-8zr56v css-az5ltz css-6jeswk adjustLetterSpacing">Política de privacidad</p>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1305,7 +1307,9 @@ $social_networks = get_field("social_networks", "options");
                                                 <div class="css-8ul899 css-j9f0op">
                                                     <div class="css-sutng4 css-7js8wp">
                                                         <div class="textContents css-vkpzlc css-u0y8se css-qc1st9" role="link" tabindex="0" data-paragraph-spacing="0px" data-list-spacing="0px">
-                                                            <p class="css-8zr56v css-az5ltz css-6jeswk  adjustLetterSpacing">Terminos y condiciones</p>
+                                                            <a href="https://cdn.neivor.com/cdn/mexico/static/docs/terminos_y_condiciones_politica_de_privacidad.pdf">
+                                                                <p class="css-8zr56v css-az5ltz css-6jeswk adjustLetterSpacing">Terminos y condiciones</p>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
