@@ -63,10 +63,11 @@ $key = 0;
     <?php endif; ?>
 </section>
 <script>
+    const bannerCount = <?= count($banner); ?>;
     $('.banner-slide').owlCarousel({
         autoplay:true, 
         autoplayTimeout: 10000,
-        loop:true,
+        loop: bannerCount > 1,
         nav:false,
         dots:true,
         margin:0,
