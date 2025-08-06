@@ -65,15 +65,15 @@ $key = 0;
 <script>
     const bannerCount = <?= count($banner); ?>;
     $('.banner-slide').owlCarousel({
-        autoplay:true, 
+        autoplay:bannerCount > 1, 
         autoplayTimeout: 10000,
         loop: bannerCount > 1,
         nav:false,
-        dots:true,
+        dots:bannerCount > 1,
         margin:0,
         items:1,
-        touchDrag: true,
-        mouseDrag: true
+        touchDrag: bannerCount > 1,
+        mouseDrag: bannerCount > 1
     }).css({'opacity':1});
 </script>
 <?php endif; ?>
