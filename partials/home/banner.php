@@ -64,6 +64,7 @@ $key = 0;
 </section>
 <script>
     const bannerCount = <?= count($banner); ?>;
+   console.log(bannerCount);
     $('.banner-slide').owlCarousel({
         autoplay:bannerCount > 1, 
         autoplayTimeout: 10000,
