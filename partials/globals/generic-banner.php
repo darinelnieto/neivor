@@ -74,7 +74,7 @@ if(get_field('custom_style_image_desktop') === true):
 
 
     <?php if($enable_hsform === true):?>
-	        <div class="row">
+	        <div id="hsform" class="row">
 	            <div class="col-12 col-md-12">
 	                <?= $hsform; ?>
 	            </div>
