@@ -55,9 +55,15 @@ $sing_in = get_field('external_links', 'option');
                                         <ul class="nav-page">
                                             <?php foreach($sub_menu['sub_menu_links'] as $item): ?>
                                                 <li>
-                                                    <a href="<?= $item['external_url']['url']; ?>" target="<?= $item['external_url']['target']; ?>">
-                                                        <?= $item['external_url']['title']; ?>
-                                                    </a>
+                                                   <?php if (is_array($item['external_url'])) : ?>
+                                                        <a href="<?= $item['external_url']['url']; ?>" target="<?= $item['external_url']['target']; ?>">
+                                                            <?= $item['external_url']['title']; ?>
+                                                        </a>
+                                                    <?php else : ?>
+                                                        <a href="<?= $item['external_url']; ?>">
+                                                            <?= $item['external_url']; ?>
+                                                        </a>
+                                                    <?php endif; ?>
                                                 </li>
                                             <?php endforeach; ?>
                                         </ul>
