@@ -91,9 +91,12 @@ $sing_in = get_field('external_links', 'option');
             </div>
             <div class="drop-down">
                 <ul>
-                    <?php foreach($sing_in as $item): ?>
+                <?php foreach($sing_in as $item): ?>
                         <li>
-                            <a href="<?= $item['url']; ?>" target="_blank" class="external-link">
+                            <a href="<?= $item['url']; ?>" 
+                               target="_blank" 
+                               class="external-link track-ga-event" 
+                               data-label="<?= esc_attr($item['cta_text']); ?>">
                                 <img src="<?= $item['icon']['url']; ?>" alt="<?= $item['icon']['title']; ?>" class="icon">
                                 <span class="text"><?= $item['cta_text']; ?></span>
                             </a>
@@ -106,7 +109,9 @@ $sing_in = get_field('external_links', 'option');
 </ul>
 <?php endif; ?>
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 1. Lógica original para los iconos (carets) del menú
   const menuItems = document.querySelectorAll('.nav-menu-partial-00596a li');
 
   menuItems.forEach(function(item) {
@@ -123,6 +128,26 @@ $sing_in = get_field('external_links', 'option');
       });
     }
   });
+
+  // 2. Lógica nueva para el tracking de clics en Google Analytics
+  const trackingLinks = document.querySelectorAll('.track-ga-event');
+
+  trackingLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        // Obtenemos el texto dinámico desde el atributo data-label (ej: "Condos", "Rentas")
+        const label = this.getAttribute('data-label');
+        
+        if (typeof gtag === 'function') {
+            gtag('event', 'neivor_customer', {
+                'event_category': 'sales',
+                'event_label': label.toLowerCase(), // Opcional: lo pasa a minúsculas
+                'value': 1.0
+            });
+        }
+    });
+  });
+
 });
+</script>
 
 </script>
